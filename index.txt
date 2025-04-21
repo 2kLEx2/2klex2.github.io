@@ -1,0 +1,275 @@
+#main
+
+"title":Tunis;
+	"maße":70x100cm;
+	"datum":11.2023;
+	"tech":Acrylic on canvas;
+
+"title":Wal;
+	"maße":50x70cm;
+	"datum":12.2023;
+	"tech":Acrylic on canvas;
+	
+"title":Visier;
+	"maße":70x80cm;
+	"datum":05.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Mount Ama Dablam;
+	"maße":80x100cm;
+	"datum":07.2024;
+	"tech":Acrylic on canvas;
+	 not available
+	
+"title":Chiemsee;
+	"maße":70x50cm;
+	"datum":12.2023;
+	"tech":Acrylic on canvas;
+	
+"title":Flamants roses;
+	"maße":70x140cm;
+	"datum":02.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Dritte Schicht;
+	"maße":50x70cm;
+	"datum":01.2024;
+	"tech":Acrylic on canvas;
+	
+"title":einsam;
+	"maße":30x70cm;
+	"datum":03.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Fluid;
+	"maße":70x140cm;
+	"datum":11.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Lichtblick;
+	"maße":70x100cm;
+	"datum":05.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Tropfen;
+	"maße":21x30cm;
+	"datum":12.2023;
+	"tech":Acrylic on canvas;
+	not available
+	
+"title":Pushing demons away;
+	"maße":70x100cm;
+	"datum":11.2023;
+	"tech":Acrylic and fineliner on canvas;
+	
+"title":Fuchs;
+	"maße":21x30cm;
+	"datum":07.2024;
+	"tech":Acrylic on paper;
+	not available
+	
+"title":Liebe - die Sonne der Welt;
+	"maße":50x70cm;
+	"datum":03.2024;
+	"tech":Acrylic on canvas;
+	
+"title":getroffen;
+	"maße":40x50cm;
+	"datum":11.2023;
+	"tech":Acrylic on canvas;
+	
+"title":Konvex - Konkav;
+	"maße":50x70cm & 40x50cm;
+	"datum":01.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Kirschblüte;
+	"maße":30x70cm;
+	"datum":01.2024;
+	"tech":Acrylic and shredder paper on canvas;
+	
+"title":Von Blume zu Blume - von Mensch zu Mensch;
+	"maße":30x70cm & 40x50cm;
+	"datum":01.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Improvisation I;
+	"maße":50x70cm;
+	"datum":03.2024;
+	"tech":Acrylic on canvas;
+	
+"title":Kitsch;
+	"maße":70x100cm;
+	"datum":10.2023;
+	"tech":Acrylic on canvas;
+	
+"title":Tetraptychon;
+	"maße":4x 30x40cm;
+	"datum":01.2024;
+	"tech":Acrylic and shredder paper on canvas;
+	
+"title":Orangen;
+	"maße":21x30cm;
+	"datum":10.2023;
+	"tech":Acrylic on paper;
+	
+"title":Linerarer Körper;
+	"maße":21x30cm;
+	"datum":10.2023;
+	"tech":Fineliner on paper;
+	
+"title":Studie I;
+	"maße":21x30cm;
+	"datum":06.2021;
+	"tech":Acrylic on paper;
+	
+"title":Studie II;
+	"maße":30x42cm;
+	"datum":05.2021;
+	"tech":Acrylic on paper;
+	
+"title":Studie III;
+	"maße":30x42cm;
+	"datum":05.2021;
+	"tech":wacrylic on paper;
+	
+"title":Studie IV;
+	"maße":3x 21x30cm;
+	"datum":06.2021;
+	"tech":Acrylic on paper;
+	
+	
+	
+	
+	
+	
+	
+#adventcalender
+
+
+	
+"title":December 1^st;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 2^nd;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 3^rd;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":Deember 4^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 5^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 6^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 7^th;
+	"maße":21.30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 8^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 9^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 10^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 11th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	not available
+	
+"title":December 12^th;
+	"maße":21x30cm:
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 13^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 14^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 15^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 16^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 17^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 18^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 19^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 20^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 21^th
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 22^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 23^th;
+	"maße":21x30cm;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":December 24^th;
+	"maße":21x30c;
+	"datum":12.2024;
+	"tech":Acrylic on paper;
+	
+"title":name;
+	"maße":100x50;
+	"datum":2024;
+	"tech":was auch immer;

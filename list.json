@@ -1,0 +1,290 @@
+{
+    "images": {
+        "adventcalender": {
+            "1": {
+                "Dec1_preview.jpg": "file",
+                "Dec1_slide1.jpg": "file",
+                "Dec1_slide2.jpg": "file"
+            },
+            "10": {
+                "Dec10_preview.jpg": "file",
+                "Dec10_slide1.jpg": "file",
+                "Dec10_slide2.jpg": "file"
+            },
+            "11": {
+                "Dec11_preview.jpg": "file",
+                "Dec11_slide1.jpg": "file",
+                "Dec11_slide2.jpg": "file"
+            },
+            "12": {
+                "Dec12_preview.jpg": "file",
+                "Dec12_slide1.jpg": "file",
+                "Dec12_slide2.jpg": "file"
+            },
+            "13": {
+                "Dec13_preview.jpg": "file",
+                "Dec13_slide1.jpg": "file",
+                "Dec13_slide2.jpg": "file"
+            },
+            "14": {
+                "Dec14_preview.jpg": "file",
+                "Dec14_slide1.jpg": "file",
+                "Dec14_slide2.jpg": "file"
+            },
+            "15": {
+                "Dec15_preview.jpg": "file",
+                "Dec15_slide1.jpg": "file",
+                "Dec15_slide2.jpg": "file"
+            },
+            "16": {
+                "Dec16_preview.jpg": "file",
+                "Dec16_slide1.jpg": "file",
+                "Dec16_slide2.jpg": "file"
+            },
+            "17": {
+                "Dec17_preview.jpg": "file",
+                "Dec17_slide1.jpg": "file",
+                "Dec17_slide2.jpg": "file"
+            },
+            "18": {
+                "Dec18_preview.jpg": "file",
+                "Dec18_slide1.jpg": "file",
+                "Dec18_slide2.jpg": "file"
+            },
+            "19": {
+                "Dec19_preview.jpg": "file",
+                "Dec19_slide1.jpg": "file",
+                "Dec19_slide2.jpg": "file"
+            },
+            "2": {
+                "Dec2_preview.jpg": "file",
+                "Dec2_slide1.jpg": "file",
+                "Dec2_slide2.jpg": "file"
+            },
+            "20": {
+                "Dec20_preview.jpg": "file",
+                "Dec20_slide1.jpg": "file",
+                "Dec20_slide2.jpg": "file"
+            },
+            "21": {
+                "Dec21_preview.jpg": "file",
+                "Dec21_slide1.jpg": "file",
+                "Dec21_slide2.jpg": "file"
+            },
+            "22": {
+                "Dec22_preview.jpg": "file",
+                "Dec22_slide1.jpg": "file",
+                "Dec22_slide2.jpg": "file"
+            },
+            "23": {
+                "Dec23_preview.jpg": "file",
+                "Dec23_slide1.jpg": "file",
+                "Dec23_slide2.jpg": "file"
+            },
+            "24": {
+                "Dec24_preview.jpg": "file",
+                "Dec24_slide1.jpg": "file",
+                "Dec24_slide2.jpg": "file"
+            },
+            "3": {
+                "Dec3_preview.jpg": "file",
+                "Dec3_slide1.jpg": "file",
+                "Dec3_slide2.jpg": "file"
+            },
+            "4": {
+                "Dec4_preview.jpg": "file",
+                "Dec4_slide1.jpg": "file",
+                "Dec4_slide2.jpg": "file"
+            },
+            "5": {
+                "Dec5_preview.jpg": "file",
+                "Dec5_slide1.jpg": "file",
+                "Dec5_slide2.jpg": "file"
+            },
+            "6": {
+                "Dec6_preview.jpg": "file",
+                "Dec6_slide1.jpg": "file",
+                "Dec6_slide2.jpg": "file"
+            },
+            "7": {
+                "Dec7_preview.jpg": "file",
+                "Dec7_slide1.jpg": "file",
+                "Dec7_slide2.jpg": "file"
+            },
+            "8": {
+                "Dec8_preview.jpg": "file",
+                "Dec8_slide1.jpg": "file",
+                "Dec8_slide2.jpg": "file"
+            },
+            "9": {
+                "Dec9_preview.jpg": "file",
+                "Dec9_slide1.jpg": "file",
+                "Dec9_slide2.jpg": "file"
+            }
+        },
+        "main": {
+            "Chiemsee": {
+                "Chiemsee_preview.jpg": "file",
+                "Chiemsee_slide1.jpg": "file",
+                "Chiemsee_slide2.jpg": "file",
+                "Chiemsee_slide3.jpg": "file"
+            },
+            "Dritte Schicht": {
+                "DritteSchicht_preview.jpg": "file",
+                "DritteSchicht_slide1.jpg": "file",
+                "DritteSchicht_slide2.jpg": "file",
+                "DritteSchicht_slide3.jpg": "file"
+            },
+            "Flamants roses": {
+                "FlamantsRoses_preview.jpg": "file",
+                "FlamantsRoses_slide1.jpg": "file",
+                "FlamantsRoses_slide2.jpg": "file",
+                "FlamantsRoses_slide3.jpg": "file"
+            },
+            "Fluid": {
+                "Fluid_preview.jpg": "file",
+                "Fluid_slide1.jpg": "file",
+                "Fluid_slide2.jpg": "file",
+                "Fluid_slide3.jpg": "file"
+            },
+            "Fuchs": {
+                "Fuchs-slide2.jpg": "file",
+                "Fuchs-slide3.jpg": "file",
+                "Fuchs_preview.jpg": "file",
+                "Fuchs_slide1.jpg": "file"
+            },
+            "Improvisation I": {
+                "ImprovisationI_preview.jpg": "file",
+                "ImprovisationI_slide1.jpg": "file",
+                "ImprovisationI_slide2.jpg": "file",
+                "ImprovisationI_slide3.jpg": "file"
+            },
+            "Kirschblüte": {
+                "Kirschblüte_preview.jpg": "file",
+                "Kirschblüte_slide1.jpg": "file",
+                "Kirschblüte_slide2.jpg": "file",
+                "Kirschblüte_slide3_.jpg": "file"
+            },
+            "Kitschbild": {
+                "Kitsch_preview.jpg": "file",
+                "Kitsch_slide1.jpg": "file",
+                "Kitsch_slide2.jpg": "file",
+                "Kitsch_slide3.JPG": "file"
+            },
+            "Konvex-Konkav": {
+                "Konvex_preview.png": "file",
+                "Konvex_slide1.jpg": "file",
+                "Konvex_slide2.jpg": "file",
+                "Konvex_slide3.png": "file"
+            },
+            "Lichtblick": {
+                "Lichblick_preview.jpg": "file",
+                "Lichtblick_slide1.jpg": "file",
+                "Lichtblick_slide2.jpg": "file",
+                "Lichtblick_slide3.jpg": "file"
+            },
+            "Liebe-Die Sonner der Welt": {
+                "Liebe_preview.jpg": "file",
+                "Liebe_slide1.jpg": "file",
+                "Liebe_slide2.jpg": "file",
+                "Liebe_slide3.jpg": "file"
+            },
+            "Mount Ama Dablam": {
+                "Mount_preview.jpg": "file",
+                "Mount_slide1.jpg": "file",
+                "Mount_slide2.jpg": "file",
+                "Mount_slide3.jpg": "file"
+            },
+            "Orangen": {
+                "Orangen_preview.jpg": "file",
+                "Orangen_slide1.jpg": "file",
+                "Orangen_slide2.JPG": "file",
+                "Orangen_slide3.jpg": "file"
+            },
+            "Pushingdemonsaway": {
+                "Pushing_preview.jpg": "file",
+                "Pushing_slide1.jpg": "file",
+                "Pushing_slide2.jpg": "file",
+                "Pushing_slide3.jpg": "file"
+            },
+            "Studie I": {
+                "StudieI_preview.jpg": "file",
+                "StudieI_slide1.jpg": "file",
+                "StudieI_slide2.jpg": "file",
+                "StudieI_slide3.jpg": "file"
+            },
+            "Studie II": {
+                "StudieII_preview.jpg": "file",
+                "StudieII_slide1.jpg": "file",
+                "StudieII_slide2.jpg": "file",
+                "StudieII_slide3.jpg": "file"
+            },
+            "Studie III": {
+                "StudieIII_preview.jpg": "file",
+                "StudieIII_slide1.jpg": "file",
+                "StudieIII_slide2.jpg": "file",
+                "StudieIII_slide3.jpg": "file"
+            },
+            "Studie IV": {
+                "StudieIV_preview.png": "file",
+                "StudieIV_slide1.jpg": "file",
+                "StudieIV_slide2.jpg": "file",
+                "StudieIV_slide3.jpg": "file"
+            },
+            "Tetraptychon": {
+                "Tetraptychon_preview.png": "file",
+                "Tetraptychon_slide1.jpg": "file",
+                "Tetraptychon_slide2.jpg": "file",
+                "Tetraptychon_slide3.jpg": "file"
+            },
+            "Tropfen": {
+                "Tropfen_preview.jpg": "file",
+                "Tropfen_slide1.jpg": "file",
+                "Tropfen_slide2.jpg": "file",
+                "Tropfen_slide3.jpg": "file"
+            },
+            "Tunis": {
+                "Tunis_preview.jpg": "file",
+                "Tunis_slide1.jpg": "file",
+                "Tunis_slide2.jpg": "file",
+                "Tunis_slide3.jpg": "file"
+            },
+            "Visier": {
+                "Visier_preview.jpg": "file",
+                "Visier_slide1.jpg": "file",
+                "Visier_slide2.jpg": "file",
+                "Visier_slide3.jpg": "file"
+            },
+            "Von Blume zu Blume - von Mensch zu Mensch": {
+                "VonBlume_preview.png": "file",
+                "VonBlume_slide1.jpg": "file",
+                "VonBlume_slide2.jpg": "file",
+                "VonBlume_slide3.jpg": "file"
+            },
+            "Wal": {
+                "Wal_preview.jpg": "file",
+                "Wal_slide1.jpg": "file",
+                "Wal_slide2.jpg": "file",
+                "Wal_slide3.jpg": "file"
+            },
+            "einsam": {
+                "einsam_preview.JPG": "file",
+                "einsam_slide1.jpg": "file",
+                "einsam_slide2.jpg": "file",
+                "einsam_slide3.jpg": "file"
+            },
+            "getroffen": {
+                "getroffen_preview.jpg": "file",
+                "getroffen_slide1.jpg": "file",
+                "getroffen_slide2.jpg": "file",
+                "getroffen_slide3.JPG": "file"
+            },
+            "linearer Körper": {
+                "Linear_preview.jpg": "file",
+                "Linear_slide1.jpg": "file",
+                "Linear_slide2.jpg": "file",
+                "Linear_slide3.jpg": "file"
+            }
+        }
+    }
+}

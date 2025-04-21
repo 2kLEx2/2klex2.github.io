@@ -1,0 +1,225 @@
+/* General Reset */
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: url('backgroundeV2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #131212;
+    overflow: hidden;
+    box-shadow: #737373;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.nav-links {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    list-style: none;
+    transition: right 0.5s ease;
+    z-index: 20;
+}
+.nav-links.open {
+    right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: gray;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    position: relative;  /* ✅ Change from absolute to relative */
+    margin-top:150px;  /* ✅ Push text slightly down */
+    z-index: 10;
+}
+
+.welcome h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo - Ensure it doesn’t shrink too much */
+.logo-header {
+    position: absolute;
+    top: 20px; /* ✅ Move it down slightly */
+    left: 20px;
+    z-index: 10;
+}
+
+.logo {
+    height: 100px;/* ✅ Reduce size slightly for mobile */
+    width: auto;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Grid-based Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Gallery Items */
+.gallery-item {
+    width: 350px; /* ✅ Make images smaller */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: -20px; /* ✅ Shift left */
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Enlarged Image */
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 150px;  /* ✅ Push gallery down */
+}
+
+/* Image & Text Container */
+.gallery-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 900px;
+    gap: 50px;  /* ✅ Reduce space between image & text */
+    padding: 20px 50px;
+    margin-left: -30px; /* ✅ Shift container slightly left */
+        /*rder-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .gallery-item-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* ✅ Reduce gap */
+        margin-left: 0; /* ✅ Prevent left shift on small screens */
+    }
+
+    .gallery-item {
+        width: 300px; /* ✅ Make images smaller on mobile */
+        max-width: 150px;
+        margin-left: 0; /* ✅ Prevent left shift on mobile */
+    }
+
+    .gallery-description {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+
+/* Mobile-Specific Fix */
+@media (max-width: 768px) {
+    .logo-header {
+        top: 15px; /* ✅ Adjust spacing */
+        left: 15px;
+    }
+
+    .logo {
+        height: 50px; /* ✅ Make it smaller */
+    }
+
+    .nav-links {
+        top: 20px;
+        right: 10px;
+        gap: 10px; /* ✅ Reduce spacing */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* ✅ Make links smaller */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .welcome {
+        position: relative;  /* ✅ Prevent overlap */
+        margin-top: 150px;    /* ✅ Push it down */
+        text-align: center;
+    }
+
+    .welcome h1 {
+        font-size: 48px; /* ✅ Reduce text size */
+    }
+};
+}

@@ -1,0 +1,67 @@
+{
+    "main": {
+      "Tunis": {
+        "title": "Tunis",
+        "size": "70x100cm",
+        "date": "11.2023",
+        "technique": "Acrylic on canvas"
+      },
+      "Wal": {
+        "title": "Wal",
+        "size": "50x70cm",
+        "date": "12.2023",
+        "technique": "Acrylic on canvas"
+      },
+      "Visier": {
+        "title": "Visier",
+        "size": "70x80cm",
+        "date": "05.2024",
+        "technique": "Acrylic on canvas"
+      },
+      "Mount Ama Dablam": {
+        "title": "Mount Ama Dablam",
+        "size": "80x100cm",
+        "date": "07.2024",
+        "technique": "Acrylic on canvas"
+      },
+      "Chiemsee": {
+        "title": "Chiemsee",
+        "size": "70x50cm",
+        "date": "12.2023",
+        "technique": "Acrylic on canvas"
+      },
+      "Flamants roses": {
+        "title": "Flamants roses",
+        "size": "70x140cm",
+        "date": "02.2024",
+        "technique": "Acrylic on canvas"
+      },
+      "Dritte Schicht": {
+        "title": "Dritte Schicht",
+        "size": "50x70cm",
+        "date": "01.2024",
+        "technique": "Acrylic on canvas"
+      }
+    },
+    "adventcalender": {
+      "December 1st": {
+        "title": "December 1st",
+        "size": "21x30cm",
+        "date": "12.2024",
+        "technique": "Acrylic on paper"
+      },
+      "December 2nd": {
+        "title": "December 2nd",
+        "size": "21x30cm",
+        "date": "12.2024",
+        "technique": "Acrylic on paper"
+      },
+      "December 3rd": {
+        "title": "December 3rd",
+        "size": "21x30cm",
+        "date": "12.2024",
+        "technique": "Acrylic on paper"
+      }
+    }
+  }
+  

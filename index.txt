@@ -113,7 +113,7 @@
 	"datum":10.2023;
 	"tech":Acrylic on paper;
 	
-"title":Linerarer Körper;
+"title":Linearer Körper;
 	"maße":21x30cm;
 	"datum":10.2023;
 	"tech":Fineliner on paper;

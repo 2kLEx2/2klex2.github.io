@@ -57,7 +57,7 @@
 	"tech":Acrylic on canvas;
 	not available
 	
-"title":Pushing demons away;
+"title":Pushingdemonsaway;
 	"maße":70x100cm;
 	"datum":11.2023;
 	"tech":Acrylic and fineliner on canvas;
@@ -68,7 +68,7 @@
 	"tech":Acrylic on paper;
 	not available
 	
-"title":Liebe - die Sonne der Welt;
+"title":Liebe-Die Sonner der Welt;
 	"maße":50x70cm;
 	"datum":03.2024;
 	"tech":Acrylic on canvas;
@@ -78,7 +78,7 @@
 	"datum":11.2023;
 	"tech":Acrylic on canvas;
 	
-"title":Konvex - Konkav;
+"title":Konvex-Konkav;
 	"maße":50x70cm & 40x50cm;
 	"datum":01.2024;
 	"tech":Acrylic on canvas;
@@ -98,7 +98,7 @@
 	"datum":03.2024;
 	"tech":Acrylic on canvas;
 	
-"title":Kitsch;
+"title":Kitschbild;
 	"maße":70x100cm;
 	"datum":10.2023;
 	"tech":Acrylic on canvas;

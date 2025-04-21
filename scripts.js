@@ -41,6 +41,9 @@ async function loadGallery() {
         const textDescriptions = await responseDescriptions.text();
         const descriptions = parseDescriptions(textDescriptions);
 
+        console.log('Images categories:', Object.keys(images));
+        console.log('Descriptions:', Object.keys(descriptions));
+
         for (const category in images) {
             const imageSet = images[category];
             const previewImage = Object.keys(imageSet).find(name => name.includes('preview'));

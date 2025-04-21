@@ -87,17 +87,23 @@ function parseDescriptions(text) {
     let currentTitle = '';
 
     lines.forEach(line => {
-        if (line.startsWith('"title":')) {
-            currentTitle = line.replace('"title":', '').trim().replace(/;/g, '');
+        const titleMatch = line.match(/"title":\s*(.*?);/);
+        const sizeMatch = line.match(/"maße":\s*(.*?);/);
+        const dateMatch = line.match(/"datum":\s*(.*?);/);
+        const techMatch = line.match(/"tech":\s*(.*?);/);
+
+        if (titleMatch) {
+            currentTitle = titleMatch[1].trim();
             descriptions[currentTitle] = { title: currentTitle };
-        } else if (line.startsWith('"maße":')) {
-            descriptions[currentTitle].size = line.replace('"maße":', '').trim().replace(/;/g, '');
-        } else if (line.startsWith('"datum":')) {
-            descriptions[currentTitle].date = line.replace('"datum":', '').trim().replace(/;/g, '');
-        } else if (line.startsWith('"tech":')) {
-            descriptions[currentTitle].technique = line.replace('"tech":', '').trim().replace(/;/g, '');
+        } else if (sizeMatch && currentTitle) {
+            descriptions[currentTitle].size = sizeMatch[1].trim();
+        } else if (dateMatch && currentTitle) {
+            descriptions[currentTitle].date = dateMatch[1].trim();
+        } else if (techMatch && currentTitle) {
+            descriptions[currentTitle].technique = techMatch[1].trim();
         }
     });
 
     return descriptions;
 }
+

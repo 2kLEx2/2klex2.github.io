@@ -1,84 +1,72 @@
-/* General Reset */
-html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background: url('backgroundeV2.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #131212;
-    overflow: hidden;
-    box-shadow: #737373;
-    overflow-y: auto; /* Enable vertical scrolling */
+@font-face {
+    font-family: 'Jedira';
+    src: url('fonts/Jedira-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+.logo-header {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 20;
+  }
+  
+  .logo {
+    height: 80px;
+    width: auto;
+  }
+header {
+    background-color: rgba(128, 128, 128, 0.487); 
+    padding: 30px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav {
+    font-family: 'Jedira', sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: right;
+    margin-right: 50px;
+    justify-content: right;
+    display: flex;
+    gap: 50px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+    nav :hover {
+      color: #707070;
+    }
+
+    body {
+        margin: 0;
+        background-color: #3C3C3C;
+        color: #e3e3e3;
+      }
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Navigation Bar */
-.nav-links {
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    height: 100px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 10px;
-    list-style: none;
-    transition: right 0.5s ease;
-    z-index: 20;
+.title {
+    font-family: 'Jedira', sans-serif;
 }
-.nav-links.open {
-    right: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #444;
-    padding: 5px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: gray;
-}
-
 /* Welcome Section */
 .welcome {
+    font-family: 'Jedira', sans-serif;
+    font-size: 48px;
+    color: transparent;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px #e3e3e3;
     text-align: center;
-    position: relative;  /* ✅ Change from absolute to relative */
-    margin-top:150px;  /* ✅ Push text slightly down */
-    z-index: 10;
+    margin-top: 50px;
+    flex: auto;
 }
 
-.welcome h1 {
-    font-size: 64px;
-    font-weight: bold;
-    color: rgb(63, 63, 63);
-}
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Logo - Ensure it doesn’t shrink too much */
-.logo-header {
-    position: absolute;
-    top: 20px; /* ✅ Move it down slightly */
-    left: 20px;
-    z-index: 10;
-}
-
-.logo {
-    height: 100px;/* ✅ Reduce size slightly for mobile */
-    width: auto;
-}
 
 /* Gallery Container */
 .gallery-container {
@@ -92,43 +80,22 @@ html {
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 0px;
     max-width: 90%;
     margin: auto;
 }
 
 /* Gallery Items */
 .gallery-item {
-    width: 350px; /* ✅ Make images smaller */
+    width: 400px; 
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
-    margin-left: -20px; /* ✅ Shift left */
-}
-
-/* Hover Effect */
-.gallery-item:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Lightbox Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
 }
 
 /* Enlarged Image */
 .enlarged-image {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 150%;
+    max-height: 80%;
     border-radius: 10px;
 }
 
@@ -146,9 +113,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 180px;
     padding: 20px;
-    margin-top: 150px;  /* ✅ Push gallery down */
+    margin-top: 100px;  /* ✅ Push gallery down */
 }
 
 /* Image & Text Container */
@@ -157,69 +124,144 @@ html {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    max-width: 900px;
-    gap: 50px;  /* ✅ Reduce space between image & text */
+    max-width: 1200px;
+    gap: 20px;  
     padding: 20px 50px;
-    margin-left: -30px; /* ✅ Shift container slightly left */
-        /*rder-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .gallery-item-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px; /* ✅ Reduce gap */
-        margin-left: 0; /* ✅ Prevent left shift on small screens */
-    }
-
-    .gallery-item {
-        width: 300px; /* ✅ Make images smaller on mobile */
-        max-width: 150px;
-        margin-left: 0; /* ✅ Prevent left shift on mobile */
-    }
-
-    .gallery-description {
-        max-width: 90%;
-        text-align: center;
-    }
+.gallery-description {
+    margin-left: 50px;
+    font-size:16px;
+    max-width: 600px;
 }
 
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .lightbox.hidden {
+    display: none;
+  }
+  
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .lightbox-controls button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
 
-/* Mobile-Specific Fix */
-@media (max-width: 768px) {
-    .logo-header {
-        top: 15px; /* ✅ Adjust spacing */
-        left: 15px;
-    }
 
-    .logo {
-        height: 50px; /* ✅ Make it smaller */
-    }
+  @media (max-width: 768px) {
+  .logo-header {
+    position: static;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-    .nav-links {
-        top: 20px;
-        right: 10px;
-        gap: 10px; /* ✅ Reduce spacing */
-    }
+  .logo {
+    height: 50px;
+  }
 
-    .nav-links a {
-        font-size: 14px; /* ✅ Make links smaller */
-    }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
 }
 
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 28px;
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 20px;
+  }
 
+  .h1, .h2 {
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
-    .welcome {
-        position: relative;  /* ✅ Prevent overlap */
-        margin-top: 150px;    /* ✅ Push it down */
-        text-align: center;
-    }
+  .gallery-item-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
 
-    .welcome h1 {
-        font-size: 48px; /* ✅ Reduce text size */
-    }
-};
+  .gallery-item {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .gallery-description {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 70%;
+  }
+
+  .lightbox-controls button {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+
+  .gallery-page {
+    margin-top: 50px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Paste the blocks above here */
 }

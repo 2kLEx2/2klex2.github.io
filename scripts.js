@@ -31,12 +31,10 @@ async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
 
     try {
-        // Load images from list.json
         const responseImages = await fetch('list.json');
         const dataImages = await responseImages.json();
         const images = dataImages.images.main;
 
-        // Load descriptions from index.txt
         const responseDescriptions = await fetch('index.txt');
         const textDescriptions = await responseDescriptions.text();
         const descriptions = parseDescriptions(textDescriptions);
@@ -49,18 +47,18 @@ async function loadGallery() {
             const previewImage = Object.keys(imageSet).find(name => name.includes('preview'));
 
             if (previewImage) {
-                // Create a container for image + description
                 const itemContainer = document.createElement('div');
                 itemContainer.classList.add('gallery-item-container');
 
-                // Create image element
                 const imgElement = document.createElement('img');
                 imgElement.src = `images/main/${category}/${previewImage}`;
                 imgElement.alt = category;
-                imgElement.classList.add('gallery-item');
+                imgElement.classList.add('gallery-item', 'reflect');
 
-                // Create description text
-                const description = descriptions[category] || {}; // Get matching description
+                // Custom data attribute for category
+                imgElement.dataset.category = category;
+
+                const description = descriptions[category] || {};
                 const textElement = document.createElement('div');
                 textElement.classList.add('gallery-description');
                 textElement.innerHTML = `
@@ -70,16 +68,69 @@ async function loadGallery() {
                     <p><strong>Technique:</strong> ${description.technique || 'Unknown'}</p>
                 `;
 
-                // Append image and description
                 itemContainer.appendChild(imgElement);
                 itemContainer.appendChild(textElement);
                 galleryContainer.appendChild(itemContainer);
             }
         }
+
+        setupLightbox(); // no need to pass image list anymore
+
     } catch (error) {
         console.error('Error loading gallery images or descriptions:', error);
     }
 }
+
+function setupLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.querySelector(".lightbox-img");
+    const closeBtn = document.querySelector(".close-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    let slideImages = [];
+    let currentSlideIndex = 0;
+
+    document.querySelectorAll(".gallery-item").forEach(img => {
+        img.addEventListener("click", () => {
+            const category = img.dataset.category;
+            const previewSrc = img.src;
+
+            const previewFile = previewSrc.split('/').pop();
+            const baseName = previewFile.replace(/_preview\.(jpg|JPG|jpeg|png)/, '');
+
+            // Add the preview as first slide
+            slideImages = [`images/main/${category}/${baseName}_preview.jpg`];
+
+            // Add slides 1-3
+            for (let i = 1; i <= 3; i++) {
+                slideImages.push(`images/main/${category}/${baseName}_slide${i}.jpg`);
+            }
+
+            currentSlideIndex = 0;
+            lightboxImg.src = slideImages[currentSlideIndex];
+            lightbox.classList.remove("hidden");
+        });
+    });
+
+    closeBtn.addEventListener("click", () => lightbox.classList.add("hidden"));
+
+    prevBtn.addEventListener("click", () => {
+        if (slideImages.length > 0) {
+            currentSlideIndex = (currentSlideIndex - 1 + slideImages.length) % slideImages.length;
+            lightboxImg.src = slideImages[currentSlideIndex];
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (slideImages.length > 0) {
+            currentSlideIndex = (currentSlideIndex + 1) % slideImages.length;
+            lightboxImg.src = slideImages[currentSlideIndex];
+        }
+    });
+}
+
+
 
 /**
  * Function to parse index.txt into an object with categories as keys

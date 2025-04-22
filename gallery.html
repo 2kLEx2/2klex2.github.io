@@ -6,26 +6,36 @@
     <title>Art Gallery</title>
     <link rel="stylesheet" href="gallery-styles.css">
     <script defer src="scripts.js"></script>
+    <link href="https://unpkg.com/@geist/font/css/geist-sans.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="logo-header">
-        <img src="logo.svg" alt="Logo" class="logo">
+    <header class="bar">
+        <div class="logo-header">
+            <a href="main.html">
+              <img src="images/KB 2.svg" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Kontakt</a>
+        </nav>
     </header>
-
-    <nav>
-      <ul class="nav-links">
-          <li><a href="main.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
     <section class="welcome">
         <h1>Explore the Gallery</h1>
     </section>
 
     <section class="gallery-container">
-        <div id="gallery" class="gallery-page"></div> <!-- ✅ Clean Structure -->
+        <div id="gallery" class="gallery-page"></div> 
     </section>
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-img" src="" alt="Full view">
+        <div class="lightbox-controls">
+          <button id="prev-btn">&#10094;</button>
+          <button id="next-btn">&#10095;</button>
+        </div>
+      </div>
 </body>
 </html>

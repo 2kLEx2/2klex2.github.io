@@ -108,6 +108,26 @@ html {
     color: white;
     cursor: pointer;
 }
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+}
+#backToTop:hover {
+    background-color: #333;
+}
 
 .gallery-page {
     display: flex;

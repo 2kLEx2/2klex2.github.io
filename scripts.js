@@ -51,9 +51,19 @@ async function loadGallery() {
                 itemContainer.classList.add('gallery-item-container');
 
                 const imgElement = document.createElement('img');
-                imgElement.src = `images/main/${category}/${previewImage}`;
+                const baseName = previewImage.replace(/\.(jpg|jpeg|png|JPG|PNG)$/i, '');
+                const webpPath = `images/main/${category}/${baseName}.webp`;
+                const fallbackPath = `images/main/${category}/${previewImage}`;
+
+                imgElement.src = webpPath;
                 imgElement.alt = category;
+                imgElement.loading = "lazy";
                 imgElement.classList.add('gallery-item', 'reflect');
+
+                // Fallback to original format if WebP fails to load
+                imgElement.onerror = () => {
+                    imgElement.src = fallbackPath;
+                };
 
                 // Custom data attribute for category
                 imgElement.dataset.category = category;
@@ -74,7 +84,7 @@ async function loadGallery() {
             }
         }
 
-        setupLightbox(); // no need to pass image list anymore
+        setupLightbox();
 
     } catch (error) {
         console.error('Error loading gallery images or descriptions:', error);
@@ -95,20 +105,31 @@ function setupLightbox() {
         img.addEventListener("click", () => {
             const category = img.dataset.category;
             const previewSrc = img.src;
-
             const previewFile = previewSrc.split('/').pop();
-            const baseName = previewFile.replace(/_preview\.(jpg|JPG|jpeg|png)/, '');
+            const baseName = previewFile.replace(/_preview\.(webp|jpg|jpeg|png|JPG|PNG)/i, '');
 
-            // Add the preview as first slide
-            slideImages = [`images/main/${category}/${baseName}_preview.jpg`];
-
-            // Add slides 1-3
-            for (let i = 1; i <= 3; i++) {
-                slideImages.push(`images/main/${category}/${baseName}_slide${i}.jpg`);
-            }
+            // Try WebP first
+            slideImages = [
+                `images/main/${category}/${baseName}_preview.webp`,
+                `images/main/${category}/${baseName}_slide1.webp`,
+                `images/main/${category}/${baseName}_slide2.webp`,
+                `images/main/${category}/${baseName}_slide3.webp`
+            ];
 
             currentSlideIndex = 0;
             lightboxImg.src = slideImages[currentSlideIndex];
+
+            // On error fallback to JPG
+            lightboxImg.onerror = () => {
+                slideImages = [
+                    `images/main/${category}/${baseName}_preview.jpg`,
+                    `images/main/${category}/${baseName}_slide1.jpg`,
+                    `images/main/${category}/${baseName}_slide2.jpg`,
+                    `images/main/${category}/${baseName}_slide3.jpg`
+                ];
+                lightboxImg.src = slideImages[currentSlideIndex];
+            };
+
             lightbox.classList.remove("hidden");
         });
     });
@@ -129,6 +150,12 @@ function setupLightbox() {
         }
     });
 }
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        lightbox.classList.add("hidden");
+    }
+});
 
 
 

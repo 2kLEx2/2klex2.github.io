@@ -1,8 +1,9 @@
+// scripts.js - Fully Rewritten & Fixed
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if menuToggle exists before adding event listener
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const welcomeText = document.querySelector(".welcome h1");
+    const welcomeText = document.querySelector('.welcome h1');
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
@@ -10,20 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Image Gallery Loading
     const galleryContainer = document.getElementById('gallery');
     if (galleryContainer) {
         loadGallery();
     }
 
-    // ✅ Add the Scroll Event Inside DOMContentLoaded
-    window.addEventListener("scroll", () => {
-        if (welcomeText) { // ✅ Check if element exists
-            let scrollY = window.scrollY; // Get scroll position
-            let fadeValue = 1 - scrollY / 200; // Adjust fade effect
-
-            welcomeText.style.opacity = fadeValue > 0 ? fadeValue : 0; // Ensure opacity doesn't go negative
+    window.addEventListener('scroll', () => {
+        if (welcomeText) {
+            let scrollY = window.scrollY;
+            let fadeValue = 1 - scrollY / 200;
+            welcomeText.style.opacity = fadeValue > 0 ? fadeValue : 0;
         }
+    });
+
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
 
@@ -39,49 +45,54 @@ async function loadGallery() {
         const textDescriptions = await responseDescriptions.text();
         const descriptions = parseDescriptions(textDescriptions);
 
-        console.log('Images categories:', Object.keys(images));
-        console.log('Descriptions:', Object.keys(descriptions));
-
         for (const category in images) {
             const imageSet = images[category];
-            const previewImage = Object.keys(imageSet).find(name => name.includes('preview'));
+            const previewFile = Object.keys(imageSet).find(name => name.toLowerCase().includes('preview'));
 
-            if (previewImage) {
-                const itemContainer = document.createElement('div');
-                itemContainer.classList.add('gallery-item-container');
+            if (!previewFile) continue;
 
-                const imgElement = document.createElement('img');
-                const baseName = previewImage.replace(/\.(jpg|jpeg|png|JPG|PNG)$/i, '');
-                const webpPath = `images/main/${category}/${baseName}.webp`;
-                const fallbackPath = `images/main/${category}/${previewImage}`;
+            const folder = encodeURIComponent(category);
+            const fileBase = previewFile.replace(/\.(webp|jpg|jpeg|png)$/i, '');
+            const fallbackExtensions = ['webp', 'jpg', 'png'];
+            let fallbackIndex = 0;
 
-                imgElement.src = webpPath;
-                imgElement.alt = category;
-                imgElement.loading = "lazy";
-                imgElement.classList.add('gallery-item', 'reflect');
+            const itemContainer = document.createElement('div');
+            itemContainer.classList.add('gallery-item-container');
 
-                // Fallback to original format if WebP fails to load
-                imgElement.onerror = () => {
-                    imgElement.src = fallbackPath;
-                };
+            const imgElement = document.createElement('img');
+            imgElement.alt = category;
+            imgElement.loading = "lazy";
+            imgElement.classList.add('gallery-item', 'reflect');
+            imgElement.dataset.category = category;
+            imgElement.dataset.basename = fileBase;
+            imgElement.dataset.slides = JSON.stringify(imageSet);
 
-                // Custom data attribute for category
-                imgElement.dataset.category = category;
+            const tryLoad = () => {
+                if (fallbackIndex >= fallbackExtensions.length) {
+                    console.warn(`All image formats failed for: ${category}`);
+                    imgElement.remove();
+                    return;
+                }
+                const ext = fallbackExtensions[fallbackIndex++];
+                imgElement.src = `images/main/${folder}/${fileBase}.${ext}`;
+            };
 
-                const description = descriptions[category] || {};
-                const textElement = document.createElement('div');
-                textElement.classList.add('gallery-description');
-                textElement.innerHTML = `
-                    <h3>${description.title || category}</h3>
-                    <p><strong>Size:</strong> ${description.size || 'Unknown'}</p>
-                    <p><strong>Date:</strong> ${description.date || 'Unknown'}</p>
-                    <p><strong>Technique:</strong> ${description.technique || 'Unknown'}</p>
-                `;
+            imgElement.onerror = tryLoad;
+            tryLoad();
 
-                itemContainer.appendChild(imgElement);
-                itemContainer.appendChild(textElement);
-                galleryContainer.appendChild(itemContainer);
-            }
+            const description = descriptions[category] || {};
+            const textElement = document.createElement('div');
+            textElement.classList.add('gallery-description');
+            textElement.innerHTML = `
+                <h3>${description.title || category}</h3>
+                <p><strong>Size:</strong> ${description.size || 'Unknown'}</p>
+                <p><strong>Date:</strong> ${description.date || 'Unknown'}</p>
+                <p><strong>Technique:</strong> ${description.technique || 'Unknown'}</p>
+            `;
+
+            itemContainer.appendChild(imgElement);
+            itemContainer.appendChild(textElement);
+            galleryContainer.appendChild(itemContainer);
         }
 
         setupLightbox();
@@ -98,70 +109,72 @@ function setupLightbox() {
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
 
-    let slideImages = [];
+    let slideFiles = [];
     let currentSlideIndex = 0;
+    let fallbackExtensions = ['webp', 'jpg', 'png'];
+    let fallbackIndex = 0;
+
+    function tryLoadImage() {
+        if (fallbackIndex >= fallbackExtensions.length) {
+            console.warn(`All formats failed for: ${slideFiles[currentSlideIndex].file}`);
+            lightboxImg.src = '';
+            return;
+        }
+
+        const ext = fallbackExtensions[fallbackIndex++];
+        const folder = encodeURIComponent(slideFiles[currentSlideIndex].category);
+        const base = slideFiles[currentSlideIndex].file.replace(/\.(webp|jpg|jpeg|png)$/i, '');
+        lightboxImg.src = `images/main/${folder}/${base}.${ext}`;
+    }
 
     document.querySelectorAll(".gallery-item").forEach(img => {
         img.addEventListener("click", () => {
             const category = img.dataset.category;
-            const previewSrc = img.src;
-            const previewFile = previewSrc.split('/').pop();
-            const baseName = previewFile.replace(/_preview\.(webp|jpg|jpeg|png|JPG|PNG)/i, '');
+            const imageSet = JSON.parse(img.dataset.slides);
 
-            // Try WebP first
-            slideImages = [
-                `images/main/${category}/${baseName}_preview.webp`,
-                `images/main/${category}/${baseName}_slide1.webp`,
-                `images/main/${category}/${baseName}_slide2.webp`,
-                `images/main/${category}/${baseName}_slide3.webp`
-            ];
+            slideFiles = Object.keys(imageSet)
+                .filter(name => name.toLowerCase().includes('slide') || name.toLowerCase().includes('preview'))
+                .sort()
+                .map(file => ({ file, category }));
 
             currentSlideIndex = 0;
-            lightboxImg.src = slideImages[currentSlideIndex];
-
-            // On error fallback to JPG
-            lightboxImg.onerror = () => {
-                slideImages = [
-                    `images/main/${category}/${baseName}_preview.jpg`,
-                    `images/main/${category}/${baseName}_slide1.jpg`,
-                    `images/main/${category}/${baseName}_slide2.jpg`,
-                    `images/main/${category}/${baseName}_slide3.jpg`
-                ];
-                lightboxImg.src = slideImages[currentSlideIndex];
-            };
-
+            fallbackIndex = 0;
+            tryLoadImage();
             lightbox.classList.remove("hidden");
         });
     });
 
-    closeBtn.addEventListener("click", () => lightbox.classList.add("hidden"));
+    lightboxImg.onerror = tryLoadImage;
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+        lightboxImg.src = '';
+    });
 
     prevBtn.addEventListener("click", () => {
-        if (slideImages.length > 0) {
-            currentSlideIndex = (currentSlideIndex - 1 + slideImages.length) % slideImages.length;
-            lightboxImg.src = slideImages[currentSlideIndex];
+        if (slideFiles.length > 0) {
+            currentSlideIndex = (currentSlideIndex - 1 + slideFiles.length) % slideFiles.length;
+            fallbackIndex = 0;
+            tryLoadImage();
         }
     });
 
     nextBtn.addEventListener("click", () => {
-        if (slideImages.length > 0) {
-            currentSlideIndex = (currentSlideIndex + 1) % slideImages.length;
-            lightboxImg.src = slideImages[currentSlideIndex];
+        if (slideFiles.length > 0) {
+            currentSlideIndex = (currentSlideIndex + 1) % slideFiles.length;
+            fallbackIndex = 0;
+            tryLoadImage();
+        }
+    });
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            lightbox.classList.add("hidden");
+            lightboxImg.src = '';
         }
     });
 }
-// Close lightbox when clicking outside the image
-lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-        lightbox.classList.add("hidden");
-    }
-});
 
-
-
-/**
- * Function to parse index.txt into an object with categories as keys
- */
 function parseDescriptions(text) {
     const lines = text.split('\n');
     const descriptions = {};
@@ -169,7 +182,7 @@ function parseDescriptions(text) {
 
     lines.forEach(line => {
         const titleMatch = line.match(/"title":\s*(.*?);/);
-        const sizeMatch = line.match(/"maße":\s*(.*?);/);
+        const sizeMatch = line.match(/"ma\u00dfe":\s*(.*?);/);
         const dateMatch = line.match(/"datum":\s*(.*?);/);
         const techMatch = line.match(/"tech":\s*(.*?);/);
 
@@ -187,18 +200,3 @@ function parseDescriptions(text) {
 
     return descriptions;
 }
-
-// Back to Top Button Logic
-const backToTopBtn = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-});
-
-backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});

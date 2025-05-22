@@ -31,22 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ✅ Dropdown menu support for mobile (iOS Safari fix)
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownContent = document.querySelector('.dropdown-content');
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const content = dropdown.querySelector('.dropdown-content');
 
-    if (dropdownToggle && dropdownContent) {
-        dropdownToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdownContent.classList.toggle('show-dropdown');
-        });
+        if (toggle && content) {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                content.classList.toggle('show-dropdown');
+            });
 
-        document.addEventListener('click', (e) => {
-            if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
-                dropdownContent.classList.remove('show-dropdown');
-            }
-        });
-    }
-});
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !content.contains(e.target)) {
+                    content.classList.remove('show-dropdown');
+                }
+            });
+        }
+    });
 async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
 

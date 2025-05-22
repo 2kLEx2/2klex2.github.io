@@ -345,12 +345,10 @@ html {
   font-size: 16px;
 }
 
-.dropdown-content a:hover {
-  background-color: #666;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 .dropdown-content {

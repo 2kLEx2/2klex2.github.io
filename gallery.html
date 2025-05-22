@@ -6,6 +6,7 @@
     <title>Art Gallery</title>
     <link rel="stylesheet" href="gallery-styles.css">
     <script defer src="scripts.js"></script>
+    <script defer src="cookie.js"></script>
     <link href="https://unpkg.com/@geist/font/css/geist-sans.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
@@ -18,6 +19,13 @@
         </div>
         <nav>
             <a href="index.html">home</a>
+            <div class="dropdown">
+                <span class="nav-link dropdown-toggle">gallery ▾</span>
+                <div class="dropdown-content">
+                    <a href="gallery.html?type=main">Gallery</a>
+                    <a href="gallery.html?type=adventcalender">Advent Calendar 2024</a>
+                </div>
+            </div>
             <a href="about.html">about</a>
             <a href="contact.html">contact</a>
         </nav>

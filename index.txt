@@ -37,10 +37,10 @@
 	"tech":Acrylic on canvas;
 	
 "title":einsam;
-"maße":30x70cm;
-"datum":03.2024;
-"tech":Acrylic on canvas;
-	
+	"maße":30x70cm;
+	"datum":03.2024;
+	"tech":Acrylic on canvas;
+		
 "title":Fluid;
 	"maße":70x140cm;
 	"datum":11.2024;

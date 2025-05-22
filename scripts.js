@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -31,8 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-});
 
+    // ✅ Dropdown menu support for mobile (iOS Safari fix)
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    if (dropdownToggle && dropdownContent) {
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.classList.toggle('show-dropdown');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.remove('show-dropdown');
+            }
+        });
+    }
+});
 async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
 

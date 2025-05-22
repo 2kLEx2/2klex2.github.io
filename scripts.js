@@ -1,4 +1,4 @@
-// scripts.js - Fully Rewritten & Fixed
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -36,10 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const galleryType = urlParams.get('type') || 'main';
+
     try {
         const responseImages = await fetch('list.json');
         const dataImages = await responseImages.json();
-        const images = dataImages.images.main;
+
+        const images = dataImages.images[galleryType];
+        if (!images) {
+            galleryContainer.innerHTML = `<p style="color:white;text-align:center;">No gallery data found for type: <strong>${galleryType}</strong></p>`;
+            return;
+        }
 
         const responseDescriptions = await fetch('index.txt');
         const textDescriptions = await responseDescriptions.text();
@@ -47,13 +55,26 @@ async function loadGallery() {
 
         for (const category in images) {
             const imageSet = images[category];
-            const previewFile = Object.keys(imageSet).find(name => name.toLowerCase().includes('preview'));
 
-            if (!previewFile) continue;
+            const availableFiles = Object.keys(imageSet);
+            const previewCandidates = availableFiles.filter(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
+            if (previewCandidates.length === 0) continue;
+
+            previewCandidates.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+            const previewFile = previewCandidates[0];
 
             const folder = encodeURIComponent(category);
             const fileBase = previewFile.replace(/\.(webp|jpg|jpeg|png)$/i, '');
-            const fallbackExtensions = ['webp', 'jpg', 'png'];
+
+            const baseMatchRegex = new RegExp(`^${fileBase}\\.(webp|jpg|jpeg|png)$`, 'i');
+            const matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
+
+            matchingFiles.sort((a, b) => {
+                if (a.toLowerCase().endsWith('.webp')) return -1;
+                if (b.toLowerCase().endsWith('.webp')) return 1;
+                return 0;
+            });
+
             let fallbackIndex = 0;
 
             const itemContainer = document.createElement('div');
@@ -64,17 +85,18 @@ async function loadGallery() {
             imgElement.loading = "lazy";
             imgElement.classList.add('gallery-item', 'reflect');
             imgElement.dataset.category = category;
-            imgElement.dataset.basename = fileBase;
             imgElement.dataset.slides = JSON.stringify(imageSet);
+            imgElement.dataset.type = galleryType; // 👈 important
 
             const tryLoad = () => {
-                if (fallbackIndex >= fallbackExtensions.length) {
+                if (fallbackIndex >= matchingFiles.length) {
                     console.warn(`All image formats failed for: ${category}`);
                     imgElement.remove();
                     return;
                 }
-                const ext = fallbackExtensions[fallbackIndex++];
-                imgElement.src = `images/main/${folder}/${fileBase}.${ext}`;
+                const fileName = matchingFiles[fallbackIndex++];
+                const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+                imgElement.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
             };
 
             imgElement.onerror = tryLoad;
@@ -111,35 +133,69 @@ function setupLightbox() {
 
     let slideFiles = [];
     let currentSlideIndex = 0;
-    let fallbackExtensions = ['webp', 'jpg', 'png'];
+    let matchingFiles = [];
     let fallbackIndex = 0;
 
     function tryLoadImage() {
-        if (fallbackIndex >= fallbackExtensions.length) {
-            console.warn(`All formats failed for: ${slideFiles[currentSlideIndex].file}`);
+        if (fallbackIndex >= matchingFiles.length) {
+            console.warn(`All formats failed for: ${slideFiles[currentSlideIndex].fullName}`);
             lightboxImg.src = '';
             return;
         }
 
-        const ext = fallbackExtensions[fallbackIndex++];
+        const fileName = matchingFiles[fallbackIndex++];
         const folder = encodeURIComponent(slideFiles[currentSlideIndex].category);
-        const base = slideFiles[currentSlideIndex].file.replace(/\.(webp|jpg|jpeg|png)$/i, '');
-        lightboxImg.src = `images/main/${folder}/${base}.${ext}`;
+        const galleryType = document.querySelector(`.gallery-item[data-category="${slideFiles[currentSlideIndex].category}"]`)?.dataset.type || 'main';
+        const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+        lightboxImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
+    }
+
+    function showCurrentSlide() {
+        const current = slideFiles[currentSlideIndex];
+        const imageSet = JSON.parse(document.querySelector(`.gallery-item[data-category="${current.category}"]`).dataset.slides);
+        const availableFiles = Object.keys(imageSet);
+
+        const baseName = current.fullName.replace(/\.(webp|jpg|jpeg|png)$/i, '');
+        const baseMatchRegex = new RegExp(`^${baseName}\\.(webp|jpg|jpeg|png)$`, 'i');
+        matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
+
+        matchingFiles.sort((a, b) => {
+            if (a.toLowerCase().endsWith('.webp')) return -1;
+            if (b.toLowerCase().endsWith('.webp')) return 1;
+            return 0;
+        });
+
+        fallbackIndex = 0;
+        tryLoadImage();
     }
 
     document.querySelectorAll(".gallery-item").forEach(img => {
         img.addEventListener("click", () => {
             const category = img.dataset.category;
+            const galleryType = img.dataset.type || 'main';
             const imageSet = JSON.parse(img.dataset.slides);
+            const availableFiles = Object.keys(imageSet);
 
-            slideFiles = Object.keys(imageSet)
-                .filter(name => name.toLowerCase().includes('slide') || name.toLowerCase().includes('preview'))
-                .sort()
-                .map(file => ({ file, category }));
+            let all = [];
+
+            if (galleryType === 'adventcalender') {
+                const preview = availableFiles.find(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
+                const rest = availableFiles.filter(name => name !== preview);
+                rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+                all = preview ? [preview, ...rest] : rest;
+            } else {
+                const slides = availableFiles.filter(name => /slide/i.test(name));
+                const mcImages = availableFiles.filter(name => /_mc\.(webp|jpg|jpeg|png)$/i.test(name));
+                all = [...slides, ...mcImages];
+            }
+
+            slideFiles = all.map(file => ({
+                fullName: file,
+                category
+            }));
 
             currentSlideIndex = 0;
-            fallbackIndex = 0;
-            tryLoadImage();
+            showCurrentSlide();
             lightbox.classList.remove("hidden");
         });
     });
@@ -154,16 +210,14 @@ function setupLightbox() {
     prevBtn.addEventListener("click", () => {
         if (slideFiles.length > 0) {
             currentSlideIndex = (currentSlideIndex - 1 + slideFiles.length) % slideFiles.length;
-            fallbackIndex = 0;
-            tryLoadImage();
+            showCurrentSlide();
         }
     });
 
     nextBtn.addEventListener("click", () => {
         if (slideFiles.length > 0) {
             currentSlideIndex = (currentSlideIndex + 1) % slideFiles.length;
-            fallbackIndex = 0;
-            tryLoadImage();
+            showCurrentSlide();
         }
     });
 
@@ -173,6 +227,30 @@ function setupLightbox() {
             lightboxImg.src = '';
         }
     });
+
+    // ✅ Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeGesture();
+    });
+
+    function handleSwipeGesture() {
+        const swipeThreshold = 50;
+        const distance = touchEndX - touchStartX;
+
+        if (distance > swipeThreshold) {
+            prevBtn.click(); // swipe right
+        } else if (distance < -swipeThreshold) {
+            nextBtn.click(); // swipe left
+        }
+    }
 }
 
 function parseDescriptions(text) {

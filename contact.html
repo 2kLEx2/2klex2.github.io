@@ -18,10 +18,34 @@
         </div>
         <nav>
             <a href="index.html">home</a>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
+            <div class="dropdown">
+                <span class="nav-link">gallery ▾</span>
+                <div class="dropdown-content">
+                    <a href="gallery.html?type=main">Gallery</a>
+                    <a href="gallery.html?type=adventcalender">Advent Calendar 2024</a>
+                </div>
+            </div>
+            <a href="about.html">about</a>
         </nav>
     </header>
+
+    <section class="contact-section">
+    <h1 class="contact-title">Contact Me</h1>
+    <form action="https://formsubmit.co/lodusix@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea name="message" rows="5" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+    </section>
 
 
 

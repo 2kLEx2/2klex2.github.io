@@ -148,222 +148,219 @@
 
 
 	
-"title":December 1^st;
+"title":1;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 2^nd;
+"title":2;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 3^rd;
+"title":3;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":Deember 4^th;
+"title":4;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 5^th;
+"title":5;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 6^th;
+"title":6;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 7^th;
+"title":7;
 	"maße":21.30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 8^th;
+"title":8;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 9^th;
+"title":9;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 10^th;
+"title":10;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 11th;
+"title":11;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	not available
 	
-"title":December 12^th;
+"title":12;
 	"maße":21x30cm:
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 13^th;
+"title":13;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 14^th;
+"title":14;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 15^th;
+"title":15;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 16^th;
+"title":16;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 17^th;
+"title":17;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 18^th;
+"title":18;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 19^th;
+"title":19;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 20^th;
+"title":20;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 21^th
+"title":21;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 22^th;
+"title":22;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 23^th;
+"title":23;
 	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":December 24^th;
+"title":24;
 	"maße":21x30c;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":name;
-	"maße":100x50;
-	"datum":2024;
-	"tech":was auch immer;"title":Abstraktion I;
-"maße":A2;
-"datum":01.2025;
-"tech":Watercolor;
+"title":Abstraktion I;
+	"maße":A2;
+	"datum":01.2025;
+	"tech":Watercolor;
 
 "title":Analog;
-"maße":29x29cm;
-"datum":02.2022;
-"tech":Fineliner and watercolor on paper;
+	"maße":29x29cm;
+	"datum":02.2022;
+	"tech":Fineliner and watercolor on paper;
 
 "title":Fassaden;
-"maße":A4;
-"datum":03.2025;
-"tech":Pencil and Chalk on paper;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Pencil and Chalk on paper;
 
 "title":Hommage an Joan Miro;
-"maße":A3;
-"datum":08.2024;
-"tech":Colored Pencil;
+	"maße":A3;
+	"datum":08.2024;
+	"tech":Colored Pencil;
 
 "title":Knöpfe;
-"maße":50x70cm;
-"datum":03.2025;
-"tech":Buttons and acrylic on canvas;
+	"maße":50x70cm;
+	"datum":03.2025;
+	"tech":Buttons and acrylic on canvas;
 
 "title":Kopf, Ernst;
-"maße":A3;
-"datum":04.2025;
-"tech":Acrylic on paper;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
 
 "title":Kopf, Kreide;
-"maße":A3;
-"datum":04.2025;
-"tech":Chalk and coal on paper;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Chalk and coal on paper;
 
 "title":Kopf, orange;
-"maße":24x30cm;
-"datum":02.2025;
-"tech":Acrylic on canvas;
+	"maße":24x30cm;
+	"datum":02.2025;
+	"tech":Acrylic on canvas;
 
 "title":Organe;
-"maße":A3;
-"datum":04.2025;
-"tech":Acrylic on canvas;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Acrylic on canvas;
 
 "title":Phönix;
-"maße":80x100cm;
-"datum":01.2025;
-"tech":Acrylic and shredder paper on canvas;
+	"maße":80x100cm;
+	"datum":01.2025;
+	"tech":Acrylic and shredder paper on canvas;
 
 "title":Rainy theater night;
-"maße":A2;
-"datum":04.2025;
-"tech":Acrylic on paper;
+	"maße":A2;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
 
 "title":Schöne, afrikanisch;
-"maße":A4;
-"datum":03.2025;
-"tech":Secorell on paper;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Secorell on paper;
 
 "title":Tanz der Kaulquappen;
-"maße":A3;
-"datum":05.2025;
-"tech":Acrylic on canvas;
+	"maße":A3;
+	"datum":05.2025;
+	"tech":Acrylic on canvas;
 
 "title":Tentakeln;
-"maße":A3;
-"datum":04.2025;
-"tech":Coal and secorell on paper;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Coal and secorell on paper;
 
 "title":trotzdem fröhlich;
-"maße":A2;
-"datum":02.2025;
-"tech":Acrylic on paper;
+	"maße":A2;
+	"datum":02.2025;
+	"tech":Acrylic on paper;
 
 "title":unterwegs in fremde Galaxien;
-"maße":A3;
-"datum":04.2025;
-"tech":Secorell on paper;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Secorell on paper;
 
 "title":Vasen;
-"maße":A2;
-"datum":04.2025;
-"tech":Acrylic on paper;
+	"maße":A2;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
 
 "title":vom Engel berührt;
-"maße":A4;
-"datum":03.2025;
-"tech":Coal and secorell on paper;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Coal and secorell on paper;
 
 "title":Zusammenhalt;
-"maße":80x100cm;
-"datum":02.2025;
-"tech":Acrylic on canvas;
+	"maße":80x100cm;
+	"datum":02.2025;
+	"tech":Acrylic on canvas;
 

@@ -57,7 +57,7 @@
 	"tech":Acrylic on canvas;
 	not available
 	
-"title":Pushingdemonsaway;
+"title":Pushing demons away;
 	"maße":70x100cm;
 	"datum":11.2023;
 	"tech":Acrylic and fineliner on canvas;
@@ -68,7 +68,7 @@
 	"tech":Acrylic on paper;
 	not available
 	
-"title":Liebe-Die Sonner der Welt;
+"title":Liebe - die Sonne der Welt;
 	"maße":50x70cm;
 	"datum":03.2024;
 	"tech":Acrylic on canvas;
@@ -78,7 +78,7 @@
 	"datum":11.2023;
 	"tech":Acrylic on canvas;
 	
-"title":Konvex-Konkav;
+"title":Konvex -Konkav;
 	"maße":50x70cm & 40x50cm;
 	"datum":01.2024;
 	"tech":Acrylic on canvas;
@@ -131,7 +131,7 @@
 "title":Studie III;
 	"maße":30x42cm;
 	"datum":05.2021;
-	"tech":wacrylic on paper;
+	"tech":Acrylic on paper;
 	
 "title":Studie IV;
 	"maße":3x 21x30cm;
@@ -205,7 +205,7 @@
 	not available
 	
 "title":12;
-	"maße":21x30cm:
+	"maße":21x30cm;
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
@@ -282,12 +282,12 @@
 "title":Fassaden;
 	"maße":A4;
 	"datum":03.2025;
-	"tech":Pencil and Chalk on paper;
+	"tech":Pencil and chalk on paper;
 
 "title":Hommage an Joan Miro;
 	"maße":A3;
 	"datum":08.2024;
-	"tech":Colored Pencil;
+	"tech":Colored pencil;
 
 "title":Knöpfe;
 	"maße":50x70cm;
@@ -324,7 +324,7 @@
 	"datum":04.2025;
 	"tech":Acrylic on paper;
 
-"title":Schöne, afrikanisch;
+"title":Schöne afrikanisch;
 	"maße":A4;
 	"datum":03.2025;
 	"tech":Secorell on paper;
@@ -335,7 +335,7 @@
 	"tech":Acrylic on canvas;
 
 "title":Tentakeln;
-	"maße":A3;
+	"maße":A2;
 	"datum":04.2025;
 	"tech":Coal and secorell on paper;
 
@@ -363,4 +363,9 @@
 	"maße":80x100cm;
 	"datum":02.2025;
 	"tech":Acrylic on canvas;
+
+"title":Improvisation II;
+	"maße":A3;
+	"datum":03.2025;
+	"tech":Acrylic on paper;
 

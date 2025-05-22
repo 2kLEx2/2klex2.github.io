@@ -85,8 +85,12 @@
         "ImprovisationI_slide2.webp": "file",
         "ImprovisationI_slide3.webp": "file"
       },
-      "ImprovisationII": {
-        "ImprovisationII_mc.png": "file"
+      "Improvisation II": {
+        "ImprovisationII_mc.png": "file",
+        "ImprovisationII_preview.jpg": "file",
+        "ImprovisationII_slide1.jpg": "file",
+        "ImprovisationII_slide2.jpg": "file",
+        "ImprovisationII_slide3.jpg": "file"
       },
       "Kirschblüte": {
         "Kirschblüte_mc.png": "file",
@@ -109,28 +113,28 @@
         "Knöpfe_slide_2.webp": "file",
         "Knöpfe_slide_3.webp": "file"
       },
-      "Konvex-Konkav": {
+      "Konvex - Konkav": {
         "Konvex_mc.png": "file",
         "Konvex_preview.png": "file",
         "Konvex_slide1.jpg": "file",
         "Konvex_slide2.jpg": "file",
         "Konvex_slide3.png": "file"
       },
-      "Kopf,Ernst": {
+      "Kopf, Ernst": {
         "Kopf,Ernst_mc.png": "file",
         "Kopf,Ernst_preview.webp": "file",
         "Kopf,Ernst_slide_1.webp": "file",
         "Kopf,Ernst_slide_2.webp": "file",
         "Kopf,Ernst_slide_3.webp": "file"
       },
-      "Kopf,Kreide": {
+      "Kopf, Kreide": {
         "Kopf,Kreide_mc.png": "file",
         "Kopf,Kreide_preview.webp": "file",
         "Kopf,Kreide_slide_1.webp": "file",
         "Kopf,Kreide_slide_2.webp": "file",
         "Kopf,Kreide_slide_3.webp": "file"
       },
-      "Kopf,orange": {
+      "Kopf, orange": {
         "Kopf,orange_mc.png": "file",
         "Kopf,orange_preview.webp": "file",
         "Kopf,orange_slide_1.webp": "file",
@@ -148,7 +152,7 @@
         "Lichtblick_slide3.jpg": "file",
         "Lichtblick_slide3.webp": "file"
       },
-      "Liebe-Die Sonner der Welt": {
+      "Liebe - die Sonne der Welt": {
         "Liebe_mc.png": "file",
         "Liebe_preview.jpg": "file",
         "Liebe_preview.webp": "file",
@@ -199,7 +203,7 @@
         "Phönix_slide_2.webp": "file",
         "Phönix_slide_3.webp": "file"
       },
-      "Pushingdemonsaway": {
+      "Pushing demons away": {
         "Pushing_mc.png": "file",
         "Pushing_preview.jpg": "file",
         "Pushing_preview.webp": "file",
@@ -217,7 +221,7 @@
         "Rainytheaternight_slide_2.webp": "file",
         "Rainytheaternight_slide_3.webp": "file"
       },
-      "Schöne,afrikanisch": {
+      "Schöne afrikanisch": {
         "Schöne,afrikanisch_mc.png": "file",
         "Schöne,afrikanisch_preview.webp": "file",
         "Schöne,afrikanisch_slide_1.webp": "file",
@@ -246,7 +250,7 @@
         "StudieIII_slide3.jpg": "file"
       },
       "Studie IV": {
-        "StudieIV_mmc.png": "file",
+        "StudieIV_mc.png": "file",
         "StudieIV_preview.png": "file",
         "StudieIV_slide1.jpg": "file",
         "StudieIV_slide2.jpg": "file",
@@ -280,7 +284,7 @@
         "Tropfen_slide2.jpg": "file",
         "Tropfen_slide3.jpg": "file"
       },
-      "trotzdemfröhlich": {
+      "trotzdem fröhlich": {
         "trotzdemfröhlich_mc.png": "file",
         "trotzdemfröhlich_preview.webp": "file",
         "trotzdemfröhlich_slide_1.webp": "file",

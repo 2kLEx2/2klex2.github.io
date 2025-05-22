@@ -101,7 +101,7 @@ html {
 
 /* Close Button */
 .close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     font-size: 30px;
@@ -109,24 +109,33 @@ html {
     cursor: pointer;
 }
 #backToTop {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     bottom: 40px;
     right: 40px;
     z-index: 100;
-    font-size: 24px;
+    width: 50px;
+    height: 50px;
     border: none;
     outline: none;
     background-color: #555;
     color: white;
     cursor: pointer;
-    padding: 12px 18px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: opacity 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+#backToTop span {
+  position: relative;
+  top: -2px; /* move arrow up */
+}
+
 #backToTop:hover {
     background-color: #333;
+    transform: scale(1.1);
 }
 
 .gallery-page {

@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         if (welcomeText) {
-            let scrollY = window.scrollY;
-            let fadeValue = 1 - scrollY / 200;
+            const fadeValue = 1 - window.scrollY / 200;
             welcomeText.style.opacity = fadeValue > 0 ? fadeValue : 0;
         }
     });
@@ -26,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener("scroll", () => {
         backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
     });
-    backToTopBtn.addEventListener("click", () => {
+    backToTopBtn?.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ✅ Dropdown menu support for mobile (iOS Safari fix)
+    // ✅ Dropdown toggle (iOS/mobile safe)
     document.querySelectorAll('.dropdown').forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
         const content = dropdown.querySelector('.dropdown-content');
@@ -48,17 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+});
+
+// ✅ Load gallery images
 async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
-
     const urlParams = new URLSearchParams(window.location.search);
     const galleryType = urlParams.get('type') || 'main';
 
     try {
         const responseImages = await fetch('list.json');
         const dataImages = await responseImages.json();
-
         const images = dataImages.images[galleryType];
+
         if (!images) {
             galleryContainer.innerHTML = `<p style="color:white;text-align:center;">No gallery data found for type: <strong>${galleryType}</strong></p>`;
             return;
@@ -70,28 +71,20 @@ async function loadGallery() {
 
         for (const category in images) {
             const imageSet = images[category];
-
             const availableFiles = Object.keys(imageSet);
             const previewCandidates = availableFiles.filter(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
             if (previewCandidates.length === 0) continue;
 
             previewCandidates.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
             const previewFile = previewCandidates[0];
-
             const folder = encodeURIComponent(category);
             const fileBase = previewFile.replace(/\.(webp|jpg|jpeg|png)$/i, '');
 
             const baseMatchRegex = new RegExp(`^${fileBase}\\.(webp|jpg|jpeg|png)$`, 'i');
             const matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
-
-            matchingFiles.sort((a, b) => {
-                if (a.toLowerCase().endsWith('.webp')) return -1;
-                if (b.toLowerCase().endsWith('.webp')) return 1;
-                return 0;
-            });
+            matchingFiles.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
 
             let fallbackIndex = 0;
-
             const itemContainer = document.createElement('div');
             itemContainer.classList.add('gallery-item-container');
 
@@ -101,7 +94,7 @@ async function loadGallery() {
             imgElement.classList.add('gallery-item', 'reflect');
             imgElement.dataset.category = category;
             imgElement.dataset.slides = JSON.stringify(imageSet);
-            imgElement.dataset.type = galleryType; // 👈 important
+            imgElement.dataset.type = galleryType;
 
             const tryLoad = () => {
                 if (fallbackIndex >= matchingFiles.length) {
@@ -133,12 +126,12 @@ async function loadGallery() {
         }
 
         setupLightbox();
-
     } catch (error) {
         console.error('Error loading gallery images or descriptions:', error);
     }
 }
 
+// ✅ Lightbox with swipe & fallback
 function setupLightbox() {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.querySelector(".lightbox-img");
@@ -169,17 +162,10 @@ function setupLightbox() {
         const current = slideFiles[currentSlideIndex];
         const imageSet = JSON.parse(document.querySelector(`.gallery-item[data-category="${current.category}"]`).dataset.slides);
         const availableFiles = Object.keys(imageSet);
-
         const baseName = current.fullName.replace(/\.(webp|jpg|jpeg|png)$/i, '');
         const baseMatchRegex = new RegExp(`^${baseName}\\.(webp|jpg|jpeg|png)$`, 'i');
         matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
-
-        matchingFiles.sort((a, b) => {
-            if (a.toLowerCase().endsWith('.webp')) return -1;
-            if (b.toLowerCase().endsWith('.webp')) return 1;
-            return 0;
-        });
-
+        matchingFiles.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
         fallbackIndex = 0;
         tryLoadImage();
     }
@@ -190,7 +176,6 @@ function setupLightbox() {
             const galleryType = img.dataset.type || 'main';
             const imageSet = JSON.parse(img.dataset.slides);
             const availableFiles = Object.keys(imageSet);
-
             let all = [];
 
             if (galleryType === 'adventcalender') {
@@ -204,11 +189,7 @@ function setupLightbox() {
                 all = [...slides, ...mcImages];
             }
 
-            slideFiles = all.map(file => ({
-                fullName: file,
-                category
-            }));
-
+            slideFiles = all.map(file => ({ fullName: file, category }));
             currentSlideIndex = 0;
             showCurrentSlide();
             lightbox.classList.remove("hidden");
@@ -243,7 +224,6 @@ function setupLightbox() {
         }
     });
 
-    // ✅ Swipe support for mobile
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -259,15 +239,12 @@ function setupLightbox() {
     function handleSwipeGesture() {
         const swipeThreshold = 50;
         const distance = touchEndX - touchStartX;
-
-        if (distance > swipeThreshold) {
-            prevBtn.click(); // swipe right
-        } else if (distance < -swipeThreshold) {
-            nextBtn.click(); // swipe left
-        }
+        if (distance > swipeThreshold) prevBtn.click();
+        else if (distance < -swipeThreshold) nextBtn.click();
     }
 }
 
+// ✅ Parse index.txt description format
 function parseDescriptions(text) {
     const lines = text.split('\n');
     const descriptions = {};

@@ -123,16 +123,20 @@ html {
     background-color: #555;
     color: white;
     cursor: pointer;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 24px;           /* make symbol clearer on all devices */
     text-align: center;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    line-height: 50px;
+    padding: 0;
+    font-family: system-ui, sans-serif;  /* normalize arrow font */
 }
+
 #backToTop span {
-  position: relative;
-  top: -2px; /* move arrow up */
+    display: inline-block;
+    transform: translateY(-1px);  /* center vertically */
+    line-height: 1;
 }
 
 #backToTop:hover {
@@ -376,7 +380,6 @@ html {
     margin: 0;
   }
 }
-
 
 .lightbox-dots {
     display: flex;

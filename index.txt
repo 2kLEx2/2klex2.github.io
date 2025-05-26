@@ -324,7 +324,7 @@
 	"datum":04.2025;
 	"tech":Acrylic on paper;
 
-"title":Schöne afrikanisch;
+"title":Schöne, afrikanisch;
 	"maße":A4;
 	"datum":03.2025;
 	"tech":Secorell on paper;

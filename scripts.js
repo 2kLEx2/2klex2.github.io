@@ -138,11 +138,26 @@ function setupLightbox() {
     const closeBtn = document.querySelector(".close-btn");
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
+    const dotContainer = document.getElementById('lightbox-dots');
 
     let slideFiles = [];
     let currentSlideIndex = 0;
     let matchingFiles = [];
     let fallbackIndex = 0;
+
+    function updateDots() {
+        dotContainer.innerHTML = '';
+        slideFiles.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('lightbox-dot');
+            if (index === currentSlideIndex) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentSlideIndex = index;
+                showCurrentSlide();
+            });
+            dotContainer.appendChild(dot);
+        });
+    }
 
     function tryLoadImage() {
         if (fallbackIndex >= matchingFiles.length) {
@@ -168,6 +183,7 @@ function setupLightbox() {
         matchingFiles.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
         fallbackIndex = 0;
         tryLoadImage();
+        updateDots();
     }
 
     document.querySelectorAll(".gallery-item").forEach(img => {

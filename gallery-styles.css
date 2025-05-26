@@ -376,3 +376,24 @@ html {
     margin: 0;
   }
 }
+
+
+.lightbox-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.lightbox-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lightbox-dot.active {
+    background-color: #fff;
+}

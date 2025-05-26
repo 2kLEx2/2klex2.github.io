@@ -192,18 +192,24 @@ function setupLightbox() {
             const galleryType = img.dataset.type || 'main';
             const imageSet = JSON.parse(img.dataset.slides);
             const availableFiles = Object.keys(imageSet);
-            let all = [];
+            
+            // Always include 'preview' first if it exists
+            const preview = availableFiles.find(name =>
+                /preview\.(webp|jpg|jpeg|png)$/i.test(name)
+            );
 
-            if (galleryType === 'adventcalender') {
-                const preview = availableFiles.find(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
-                const rest = availableFiles.filter(name => name !== preview);
-                rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
-                all = preview ? [preview, ...rest] : rest;
-            } else {
-                const slides = availableFiles.filter(name => /slide/i.test(name));
-                const mcImages = availableFiles.filter(name => /_mc\.(webp|jpg|jpeg|png)$/i.test(name));
-                all = [...slides, ...mcImages];
-            }
+            // Collect all other relevant files
+            const slides = availableFiles.filter(name => /slide/i.test(name));
+            const mcImages = availableFiles.filter(name =>
+                /_mc\.(webp|jpg|jpeg|png)$/i.test(name)
+            );
+
+            // Merge all remaining files (excluding preview if already picked)
+            const rest = [...slides, ...mcImages].filter(name => name !== preview);
+            rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+
+            // Combine preview + rest
+            const all = preview ? [preview, ...rest] : rest;
 
             slideFiles = all.map(file => ({ fullName: file, category }));
             currentSlideIndex = 0;

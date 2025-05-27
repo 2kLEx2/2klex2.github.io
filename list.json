@@ -92,9 +92,6 @@
         "ImprovisationII_slide2.jpg": "file",
         "ImprovisationII_slide3.jpg": "file"
       },
-      "ImprovisationII": {
-        "ImprovisationII_mc.png": "file"
-      },
       "Kirschblüte": {
         "Kirschblüte_mc.png": "file",
         "Kirschblüte_preview.webp": "file",
@@ -145,25 +142,17 @@
         "Kopf,orange_slide_3.webp": "file"
       },
       "Lichtblick": {
-        "Lichblick_preview.jpg": "file",
         "Lichblick_preview.webp": "file",
         "Lichtblick_mc.png": "file",
-        "Lichtblick_slide1.jpg": "file",
         "Lichtblick_slide1.webp": "file",
-        "Lichtblick_slide2.jpg": "file",
         "Lichtblick_slide2.webp": "file",
-        "Lichtblick_slide3.jpg": "file",
         "Lichtblick_slide3.webp": "file"
       },
       "Liebe - die Sonne der Welt": {
         "Liebe_mc.png": "file",
-        "Liebe_preview.jpg": "file",
         "Liebe_preview.webp": "file",
-        "Liebe_slide1.jpg": "file",
         "Liebe_slide1.webp": "file",
-        "Liebe_slide2.jpg": "file",
         "Liebe_slide2.webp": "file",
-        "Liebe_slide3.jpg": "file",
         "Liebe_slide3.webp": "file"
       },
       "linearer Körper": {
@@ -182,13 +171,10 @@
       },
       "Orangen": {
         "Orangen_mc.png": "file",
-        "Orangen_preview.jpg": "file",
         "Orangen_preview.webp": "file",
         "Orangen_slide1.jpg": "file",
-        "Orangen_slide1.webp": "file",
         "Orangen_slide2.JPG": "file",
         "Orangen_slide2.webp": "file",
-        "Orangen_slide3.jpg": "file",
         "Orangen_slide3.webp": "file"
       },
       "Organe": {
@@ -207,13 +193,9 @@
       },
       "Pushing demons away": {
         "Pushing_mc.png": "file",
-        "Pushing_preview.jpg": "file",
         "Pushing_preview.webp": "file",
-        "Pushing_slide1.jpg": "file",
         "Pushing_slide1.webp": "file",
-        "Pushing_slide2.jpg": "file",
         "Pushing_slide2.webp": "file",
-        "Pushing_slide3.jpg": "file",
         "Pushing_slide3.webp": "file"
       },
       "Rainy theater night": {
@@ -317,13 +299,9 @@
       },
       "Visier": {
         "Visier_mc.png": "file",
-        "Visier_preview.jpg": "file",
         "Visier_preview.webp": "file",
-        "Visier_slide1.jpg": "file",
         "Visier_slide1.webp": "file",
-        "Visier_slide2.jpg": "file",
         "Visier_slide2.webp": "file",
-        "Visier_slide3.jpg": "file",
         "Visier_slide3.webp": "file"
       },
       "vom Engel berührt": {
@@ -342,13 +320,9 @@
       },
       "Wal": {
         "Wal_mc.png": "file",
-        "Wal_preview.jpg": "file",
         "Wal_preview.webp": "file",
-        "Wal_slide1.jpg": "file",
         "Wal_slide1.webp": "file",
-        "Wal_slide2.jpg": "file",
         "Wal_slide2.webp": "file",
-        "Wal_slide3.jpg": "file",
         "Wal_slide3.webp": "file"
       },
       "Zusammenhalt": {

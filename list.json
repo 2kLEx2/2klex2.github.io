@@ -92,6 +92,9 @@
         "ImprovisationII_slide2.jpg": "file",
         "ImprovisationII_slide3.jpg": "file"
       },
+      "ImprovisationII": {
+        "ImprovisationII_mc.png": "file"
+      },
       "Kirschblüte": {
         "Kirschblüte_mc.png": "file",
         "Kirschblüte_preview.webp": "file",
@@ -177,7 +180,6 @@
         "Mount_slide2.jpg": "file",
         "Mount_slide3.jpg": "file"
       },
-      "Neuer Ordner": {},
       "Orangen": {
         "Orangen_mc.png": "file",
         "Orangen_preview.jpg": "file",
@@ -251,6 +253,7 @@
       },
       "Studie IV": {
         "StudieIV_mc.png": "file",
+        "StudieIV_mmc.png": "file",
         "StudieIV_preview.png": "file",
         "StudieIV_slide1.jpg": "file",
         "StudieIV_slide2.jpg": "file",
@@ -358,9 +361,9 @@
     },
     "adventcalender": {
       "1": {
-        "DSC03020_edited.jpg": "file",
-        "DSC03021_edited.jpg": "file",
-        "preview.jpg": "file"
+        "preview.jpg": "file",
+        "test.jpg": "file",
+        "test2.jpg": "file"
       },
       "2": {
         "DSC03027_edited.jpg": "file",

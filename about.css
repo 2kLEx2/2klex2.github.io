@@ -1,0 +1,39 @@
+.about {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  width: 800px;
+  text-align: left;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.about2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  width: 800px;
+  text-align: left;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  max-width: 800px;
+}
+
+.face {
+  width: 300px;
+  height: auto;
+  margin-top: 300px;
+}

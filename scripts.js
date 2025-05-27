@@ -54,6 +54,7 @@ async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
     const urlParams = new URLSearchParams(window.location.search);
     const galleryType = urlParams.get('type') || 'main';
+    const materialFilter = urlParams.get('material'); // 'paper' or 'canvas'
 
     try {
         const responseImages = await fetch('list.json');
@@ -70,6 +71,22 @@ async function loadGallery() {
         const descriptions = parseDescriptions(textDescriptions);
 
         for (const category in images) {
+            const description = descriptions[category] || {};
+            const technique = (description.technique || '').toLowerCase();
+
+            // Use last keyword (after "on ") as dominant material
+            const materialMatch = technique.match(/on\s+(canvas|paper)\b/);
+            const material = materialMatch ? materialMatch[1] : null;
+
+            if (materialFilter && material !== materialFilter) {
+                continue;
+            }
+
+            // ❗️Apply material filter if provided
+            if (materialFilter && !technique.includes(materialFilter)) {
+                continue;
+            }
+
             const imageSet = images[category];
             const availableFiles = Object.keys(imageSet);
             const previewCandidates = availableFiles.filter(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
@@ -110,7 +127,6 @@ async function loadGallery() {
             imgElement.onerror = tryLoad;
             tryLoad();
 
-            const description = descriptions[category] || {};
             const textElement = document.createElement('div');
             textElement.classList.add('gallery-description');
             textElement.innerHTML = `
@@ -194,22 +210,28 @@ function setupLightbox() {
             const availableFiles = Object.keys(imageSet);
             
             // Always include 'preview' first if it exists
-            const preview = availableFiles.find(name =>
-                /preview\.(webp|jpg|jpeg|png)$/i.test(name)
-            );
+            let all = [];
 
-            // Collect all other relevant files
-            const slides = availableFiles.filter(name => /slide/i.test(name));
-            const mcImages = availableFiles.filter(name =>
-                /_mc\.(webp|jpg|jpeg|png)$/i.test(name)
-            );
+            if (galleryType === 'adventcalender') {
+                // Load all image files regardless of naming
+                all = availableFiles.filter(name => /\.(webp|jpg|jpeg|png)$/i.test(name));
+                all.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+            } else {
+                // Original logic for other types
+                const preview = availableFiles.find(name =>
+                    /preview\.(webp|jpg|jpeg|png)$/i.test(name)
+                );
 
-            // Merge all remaining files (excluding preview if already picked)
-            const rest = [...slides, ...mcImages].filter(name => name !== preview);
-            rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+                const slides = availableFiles.filter(name => /slide/i.test(name));
+                const mcImages = availableFiles.filter(name =>
+                    /_mc\.(webp|jpg|jpeg|png)$/i.test(name)
+                );
 
-            // Combine preview + rest
-            const all = preview ? [preview, ...rest] : rest;
+                const rest = [...slides, ...mcImages].filter(name => name !== preview);
+                rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+                all = preview ? [preview, ...rest] : rest;
+            }
+
 
             slideFiles = all.map(file => ({ fullName: file, category }));
             currentSlideIndex = 0;

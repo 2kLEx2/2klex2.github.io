@@ -78,7 +78,7 @@
 	"datum":11.2023;
 	"tech":Acrylic on canvas;
 	
-"title":Konvex -Konkav;
+"title":Konvex - Konkav;
 	"maße":50x70cm & 40x50cm;
 	"datum":01.2024;
 	"tech":Acrylic on canvas;
@@ -86,7 +86,7 @@
 "title":Kirschblüte;
 	"maße":30x70cm;
 	"datum":01.2024;
-	"tech":Acrylic and shredder paper on canvas;
+	"tech":Acrylic and shredder-paper on canvas;
 	
 "title":Von Blume zu Blume - von Mensch zu Mensch;
 	"maße":30x70cm & 40x50cm;
@@ -138,16 +138,110 @@
 	"datum":06.2021;
 	"tech":Acrylic on paper;
 	
-	
-	
-	
-	
-	
-	
+"title":Abstraktion I;
+	"maße":A2;
+	"datum":01.2025;
+	"tech":Watercolor on paper;
+
+"title":Analog;
+	"maße":29x29cm;
+	"datum":02.2022;
+	"tech":Fineliner and watercolor on paper;
+
+"title":Fassaden;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Pencil and chalk on paper;
+
+"title":Hommage an Joan Miro;
+	"maße":A3;
+	"datum":08.2024;
+	"tech":Colored pencil on paper;
+
+"title":Knöpfe;
+	"maße":50x70cm;
+	"datum":03.2025;
+	"tech":Buttons and acrylic on canvas;
+
+"title":Kopf, Ernst;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
+
+"title":Kopf, Kreide;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Chalk and coal on paper;
+
+"title":Kopf, orange;
+	"maße":24x30cm;
+	"datum":02.2025;
+	"tech":Acrylic on canvas;
+
+"title":Organe;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Acrylic on canvas;
+
+"title":Phönix;
+	"maße":80x100cm;
+	"datum":01.2025;
+	"tech":Acrylic and shredder paper on canvas;
+
+"title":Rainy theater night;
+	"maße":A2;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
+
+"title":Schöne, afrikanisch;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Secorell on paper;
+
+"title":Tanz der Kaulquappen;
+	"maße":A3;
+	"datum":05.2025;
+	"tech":Acrylic on canvas;
+
+"title":Tentakeln;
+	"maße":A2;
+	"datum":04.2025;
+	"tech":Coal and secorell on paper;
+
+"title":trotzdem fröhlich;
+	"maße":A2;
+	"datum":02.2025;
+	"tech":Acrylic on paper;
+
+"title":unterwegs in fremde Galaxien;
+	"maße":A3;
+	"datum":04.2025;
+	"tech":Secorell on paper;
+
+"title":Vasen;
+	"maße":A2;
+	"datum":04.2025;
+	"tech":Acrylic on paper;
+
+"title":vom Engel berührt;
+	"maße":A4;
+	"datum":03.2025;
+	"tech":Coal and secorell on paper;
+
+"title":Zusammenhalt;
+	"maße":80x100cm;
+	"datum":02.2025;
+	"tech":Acrylic on canvas;
+
+"title":Improvisation II;
+	"maße":A3;
+	"datum":03.2025;
+	"tech":Acrylic on paper;
+
+
+#########################################
 #adventcalender
 
-
-	
 "title":1;
 	"maße":21x30cm;
 	"datum":12.2024;
@@ -269,103 +363,3 @@
 	"datum":12.2024;
 	"tech":Acrylic on paper;
 	
-"title":Abstraktion I;
-	"maße":A2;
-	"datum":01.2025;
-	"tech":Watercolor;
-
-"title":Analog;
-	"maße":29x29cm;
-	"datum":02.2022;
-	"tech":Fineliner and watercolor on paper;
-
-"title":Fassaden;
-	"maße":A4;
-	"datum":03.2025;
-	"tech":Pencil and chalk on paper;
-
-"title":Hommage an Joan Miro;
-	"maße":A3;
-	"datum":08.2024;
-	"tech":Colored pencil;
-
-"title":Knöpfe;
-	"maße":50x70cm;
-	"datum":03.2025;
-	"tech":Buttons and acrylic on canvas;
-
-"title":Kopf, Ernst;
-	"maße":A3;
-	"datum":04.2025;
-	"tech":Acrylic on paper;
-
-"title":Kopf, Kreide;
-	"maße":A3;
-	"datum":04.2025;
-	"tech":Chalk and coal on paper;
-
-"title":Kopf, orange;
-	"maße":24x30cm;
-	"datum":02.2025;
-	"tech":Acrylic on canvas;
-
-"title":Organe;
-	"maße":A3;
-	"datum":04.2025;
-	"tech":Acrylic on canvas;
-
-"title":Phönix;
-	"maße":80x100cm;
-	"datum":01.2025;
-	"tech":Acrylic and shredder paper on canvas;
-
-"title":Rainy theater night;
-	"maße":A2;
-	"datum":04.2025;
-	"tech":Acrylic on paper;
-
-"title":Schöne, afrikanisch;
-	"maße":A4;
-	"datum":03.2025;
-	"tech":Secorell on paper;
-
-"title":Tanz der Kaulquappen;
-	"maße":A3;
-	"datum":05.2025;
-	"tech":Acrylic on canvas;
-
-"title":Tentakeln;
-	"maße":A2;
-	"datum":04.2025;
-	"tech":Coal and secorell on paper;
-
-"title":trotzdem fröhlich;
-	"maße":A2;
-	"datum":02.2025;
-	"tech":Acrylic on paper;
-
-"title":unterwegs in fremde Galaxien;
-	"maße":A3;
-	"datum":04.2025;
-	"tech":Secorell on paper;
-
-"title":Vasen;
-	"maße":A2;
-	"datum":04.2025;
-	"tech":Acrylic on paper;
-
-"title":vom Engel berührt;
-	"maße":A4;
-	"datum":03.2025;
-	"tech":Coal and secorell on paper;
-
-"title":Zusammenhalt;
-	"maße":80x100cm;
-	"datum":02.2025;
-	"tech":Acrylic on canvas;
-
-"title":Improvisation II;
-	"maße":A3;
-	"datum":03.2025;
-	"tech":Acrylic on paper;
-

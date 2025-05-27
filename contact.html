@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
     <link href="https://unpkg.com/@geist/font/css/geist-sans.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,13 +20,14 @@
         </div>
         <nav>
             <a href="index.html">home</a>
-            <div class="dropdown">
-                <button class="nav-link dropdown-toggle" aria-expanded="false">gallery</button>
-                <div class="dropdown-content">
-                    <a href="gallery.html?type=main">Gallery</a>
-                    <a href="gallery.html?type=adventcalender">Advent Calendar 2024</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">gallery</button>
+                    <div class="dropdown-content">
+                        <a href="gallery.html?type=main&material=paper">On Paper</a>
+                        <a href="gallery.html?type=main&material=canvas">On Canvas</a>
+                        <a href="gallery.html?type=adventcalender">Advent Calendar 2024</a>
+                    </div>
                 </div>
-            </div>
             <a href="about.html">about</a>
             <a href="contact.html">contact</a>
         </nav>
@@ -49,19 +52,26 @@
     </section>
 
     <footer class="site-footer">
-    <div class="footer-content">
-        <p><strong>Name: </strong>Kathi Büsel</p>
-        <p><strong>Address:</strong> 8010 Graz, Österreich</p>
-        <p><strong>Email:</strong> <a href="mailto:max@example.com">k.buesel@web.de</a></p>
-        <p>
-        <strong>Instagram:</strong>
-        <a href="https://www.instagram.com/kathi.artstudio" target="_blank">@kathi.artstudio</a>
-        </p>
-    </div>
+        <div class="data">
+            <p><strong>Name: </strong>Kathi Büsel</p>
+            <p><strong>Address:</strong> 8010 Graz, Österreich</p>
+            <p><strong>Email: </strong>k.buesel@web.de</p>
+        </div>
+        <div class="social">
+            <p>
+                <a href="https://www.instagram.com/kathi.artstudio" target="_blank">
+                    <img src="/images/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 20px;">
+                    <strong>Instagram</strong>
+                </a>
+            </p>
+            <p>
+                <a href="https://www.tiktok.com/@kathiartstudio" target="_blank">
+                    <img src="/images/tiktok.svg" alt="tiktok" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 20px;">
+                    <strong>Tiktok</strong>
+                </a>
+            </p>
+        </div>
     </footer>
-
-
-
     <script src="scripts.js"></script>
 </body>
 </html>

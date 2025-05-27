@@ -164,29 +164,6 @@ nav :hover {
   /* Paste the blocks above here */
 }
 
-
-
-.about {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: white;
-  width: 800px;
-  text-align: center;
-  margin: auto;
-  margin-top: 300px;
-}
-.about2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: white;
-  width: 800px;
-  text-align: center;
-  margin: auto;
-  margin-top: 100px;
-}
-
-
-
 .ig {
   width:80%;
   height:600px;
@@ -196,8 +173,6 @@ nav :hover {
   margin-top: 300px;
   align-items: center;
 }
-
-
 
 .nav-link {
   color: white;
@@ -224,6 +199,7 @@ nav :hover {
   text-align: center; /* ✅ center text inside items */
   padding: 10px 0;     /* optional: vertical padding */
 }
+
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
@@ -240,23 +216,6 @@ nav :hover {
   }
 }
 
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.text-container {
-  max-width: 800px;
-}
-
-.face {
-  width: 280px;
-  height: auto;
-  margin-top: 300px;
-}
 
 
 .contact-section {
@@ -326,28 +285,6 @@ nav :hover {
     width: 200px;
     margin-top: 40px;
   }
-}
-
-
-
-.site-footer {
-  background-color: #2c2c2c;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  margin-top: 400px;
-}
-
-.site-footer a {
-  color: #aaa;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  color: white;
-  text-decoration: underline;
 }
 
 

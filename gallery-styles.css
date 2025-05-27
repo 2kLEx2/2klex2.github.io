@@ -150,7 +150,7 @@ html {
     align-items: center;
     gap: 180px;
     padding: 20px;
-    margin-top: 100px;  /* ✅ Push gallery down */
+    margin-top: 100px;
 }
 
 /* Image & Text Container */
@@ -174,7 +174,7 @@ html {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(51, 51, 51, 0.966);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +185,7 @@ html {
   .lightbox.hidden {
     display: none;
   }
-  
+
   .lightbox-img {
     max-width: 90%;
     max-height: 80%;
@@ -193,23 +193,56 @@ html {
     border-radius: 8px;
   }
   
-  .lightbox-controls button {
-    background: transparent;
+.lightbox-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* prevent overlapping clicks */
+}
+
+.lightbox-controls button {
+    background: none;
     border: none;
-    color: white;
-    font-size: 2rem;
-    margin: 0 20px;
+    color: rgba(182, 182, 182, 0.753);
+    font-size: 3rem; /* ⬅️ make them bigger */
+    padding: 10px 20px;
     cursor: pointer;
+    pointer-events: auto; /* re-enable pointer for buttons */
+    transition: transform 0.2s ease;
+}
+
+#prev-btn {
+    position: absolute;
+    left: 120px;
+}
+
+#next-btn {
+    position: absolute;
+    right: 120px;
+}
+
+
+.lightbox-controls button:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .lightbox-controls {
+    display: none;
   }
+}
   
-  .close-btn {
+.close-btn {
     position: absolute;
     top: 20px;
     right: 30px;
     color: white;
     font-size: 30px;
     cursor: pointer;
-  }
+}
 
 
   @media (max-width: 768px) {

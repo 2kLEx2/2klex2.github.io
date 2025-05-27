@@ -64,7 +64,8 @@ nav :hover {
 }
 
 .h2 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 32px;
   color: #e3e3e3;
   text-decoration: none;
@@ -215,8 +216,6 @@ nav :hover {
     display: block;
   }
 }
-
-
 
 .contact-section {
   max-width: 600px;

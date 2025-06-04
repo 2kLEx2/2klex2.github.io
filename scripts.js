@@ -237,6 +237,7 @@ function setupLightbox() {
             currentSlideIndex = 0;
             showCurrentSlide();
             lightbox.classList.remove("hidden");
+            document.body.style.overflow = 'hidden';
         });
     });
 
@@ -245,6 +246,7 @@ function setupLightbox() {
     closeBtn.addEventListener("click", () => {
         lightbox.classList.add("hidden");
         lightboxImg.src = '';
+        document.body.style.overflow = '';
     });
 
     prevBtn.addEventListener("click", () => {
@@ -265,6 +267,7 @@ function setupLightbox() {
         if (event.target === lightbox) {
             lightbox.classList.add("hidden");
             lightboxImg.src = '';
+            document.body.style.overflow = '';
         }
     });
 

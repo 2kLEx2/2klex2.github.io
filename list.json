@@ -1,27 +1,6 @@
 {
   "images": {
     "main": {
-      "Abstraktion I": {
-        "AbstraktionI_mc.webp": "file",
-        "AbstraktionI_preview.webp": "file",
-        "AbstraktionI_slide_1.webp": "file",
-        "AbstraktionI_slide_2.webp": "file",
-        "AbstraktionI_slide_3.webp": "file"
-      },
-      "Analog": {
-        "Analog_mc.webp": "file",
-        "Analog_preview.webp": "file",
-        "Analog_slide_1.webp": "file",
-        "Analog_slide_2.webp": "file",
-        "Analog_slide_3.webp": "file"
-      },
-      "Chiemsee": {
-        "Chiemsee_mc.webp": "file",
-        "Chiemsee_preview.webp": "file",
-        "Chiemsee_slide1.webp": "file",
-        "Chiemsee_slide2.webp": "file",
-        "Chiemsee_slide3.webp": "file"
-      },
       "Dritte Schicht": {
         "DritteSchicht_mc.webp": "file",
         "DritteSchicht_preview.webp": "file",
@@ -35,13 +14,6 @@
         "einsam_slide1.webp": "file",
         "einsam_slide2.webp": "file",
         "einsam_slide3.webp": "file"
-      },
-      "Fassaden": {
-        "Fassaden_mc.webp": "file",
-        "Fassaden_preview.webp": "file",
-        "Fassaden_slide_1.webp": "file",
-        "Fassaden_slide_2.webp": "file",
-        "Fassaden_slide_3.webp": "file"
       },
       "Flamants roses": {
         "FlamantsRoses_mc.webp": "file",
@@ -57,13 +29,6 @@
         "Fluid_slide2.webp": "file",
         "Fluid_slide3.webp": "file"
       },
-      "Fuchs": {
-        "Fuchs_mc.webp": "file",
-        "Fuchs_preview.webp": "file",
-        "Fuchs_slide1.webp": "file",
-        "Fuchs_slide2.webp": "file",
-        "Fuchs_slide3.webp": "file"
-      },
       "getroffen": {
         "getroffen_mc.webp": "file",
         "getroffen_preview.webp": "file",
@@ -71,26 +36,12 @@
         "getroffen_slide2.webp": "file",
         "getroffen_slide3.webp": "file"
       },
-      "Hommage an Joan Miro": {
-        "HommageanJoanMiro_mc.webp": "file",
-        "HommageanJoanMiro_preview.webp": "file",
-        "HommageanJoanMiro_slide_1.webp": "file",
-        "HommageanJoanMiro_slide_2.webp": "file",
-        "HommageanJoanMiro_slide_3.webp": "file"
-      },
       "Improvisation I": {
         "ImprovisationI_mc.webp": "file",
         "ImprovisationI_preview.webp": "file",
         "ImprovisationI_slide1.webp": "file",
         "ImprovisationI_slide2.webp": "file",
         "ImprovisationI_slide3.webp": "file"
-      },
-      "Improvisation II": {
-        "ImprovisationII_mc.webp": "file",
-        "ImprovisationII_preview.jpg": "file",
-        "ImprovisationII_slide1.jpg": "file",
-        "ImprovisationII_slide2.jpg": "file",
-        "ImprovisationII_slide3.jpg": "file"
       },
       "Kirschblüte": {
         "Kirschblüte_mc.webp": "file",
@@ -120,20 +71,6 @@
         "Konvex_slide2.jpg": "file",
         "Konvex_slide3.png": "file"
       },
-      "Kopf, Ernst": {
-        "Kopf,Ernst_mc.webp": "file",
-        "Kopf,Ernst_preview.webp": "file",
-        "Kopf,Ernst_slide_1.webp": "file",
-        "Kopf,Ernst_slide_2.webp": "file",
-        "Kopf,Ernst_slide_3.webp": "file"
-      },
-      "Kopf, Kreide": {
-        "Kopf,Kreide_mc.webp": "file",
-        "Kopf,Kreide_preview.webp": "file",
-        "Kopf,Kreide_slide_1.webp": "file",
-        "Kopf,Kreide_slide_2.webp": "file",
-        "Kopf,Kreide_slide_3.webp": "file"
-      },
       "Kopf, orange": {
         "Kopf,orange_mc.webp": "file",
         "Kopf,orange_preview.webp": "file",
@@ -155,27 +92,12 @@
         "Liebe_slide2.webp": "file",
         "Liebe_slide3.webp": "file"
       },
-      "linearer Körper": {
-        "Linear_mc.webp": "file",
-        "Linear_preview.jpg": "file",
-        "Linear_slide1.jpg": "file",
-        "Linear_slide2.jpg": "file",
-        "Linear_slide3.jpg": "file"
-      },
       "Mount Ama Dablam": {
         "Mount_mc.webp": "file",
         "Mount_preview.jpg": "file",
         "Mount_slide1.jpg": "file",
         "Mount_slide2.jpg": "file",
         "Mount_slide3.jpg": "file"
-      },
-      "Orangen": {
-        "Orangen_mc.webp": "file",
-        "Orangen_preview.webp": "file",
-        "Orangen_slide1.jpg": "file",
-        "Orangen_slide2.JPG": "file",
-        "Orangen_slide2.webp": "file",
-        "Orangen_slide3.webp": "file"
       },
       "Organe": {
         "Organe_mc.webp": "file",
@@ -197,6 +119,144 @@
         "Pushing_slide1.webp": "file",
         "Pushing_slide2.webp": "file",
         "Pushing_slide3.webp": "file"
+      },
+      "Tanz der Kaulquappen": {
+        "TanzderKaulquappen_mc.webp": "file",
+        "TanzderKaulquappen_preview.webp": "file",
+        "TanzderKaulquappen_slide_1.webp": "file",
+        "TanzderKaulquappen_slide_2.webp": "file",
+        "TanzderKaulquappen_slide_3.webp": "file"
+      },
+      "Tetraptychon": {
+        "Tetraptychon_mc.webp": "file",
+        "Tetraptychon_preview.png": "file",
+        "Tetraptychon_slide1.jpg": "file",
+        "Tetraptychon_slide2.jpg": "file",
+        "Tetraptychon_slide3.jpg": "file"
+      },
+      "Tropfen": {
+        "Tropfen_mc.webp": "file",
+        "Tropfen_preview.jpg": "file",
+        "Tropfen_slide1.jpg": "file",
+        "Tropfen_slide2.jpg": "file",
+        "Tropfen_slide3.jpg": "file"
+      },
+      "Tunis": {
+        "Tunis_mc.webp": "file",
+        "Tunis_preview.jpg": "file",
+        "Tunis_slide1.jpg": "file",
+        "Tunis_slide2.jpg": "file",
+        "Tunis_slide3.jpg": "file"
+      },
+      "Visier": {
+        "Visier_mc.png": "file",
+        "Visier_mc.webp": "file",
+        "Visier_preview.webp": "file",
+        "Visier_slide1.webp": "file",
+        "Visier_slide2.webp": "file",
+        "Visier_slide3.webp": "file"
+      },
+      "Von Blume zu Blume - von Mensch zu Mensch": {
+        "VonBlume_mc.png": "file",
+        "VonBlume_mc.webp": "file",
+        "VonBlume_preview.png": "file",
+        "VonBlume_slide1.jpg": "file",
+        "VonBlume_slide2.jpg": "file",
+        "VonBlume_slide3.jpg": "file"
+      },
+      "Wal": {
+        "Wal_mc.png": "file",
+        "Wal_mc.webp": "file",
+        "Wal_preview.webp": "file",
+        "Wal_slide1.webp": "file",
+        "Wal_slide2.webp": "file",
+        "Wal_slide3.webp": "file"
+      },
+      "Zusammenhalt": {
+        "Zusammenhalt_mc.png": "file",
+        "Zusammenhalt_mc.webp": "file",
+        "Zusammenhalt_preview.webp": "file",
+        "Zusammenhalt_slide_1.webp": "file",
+        "Zusammenhalt_slide_2.webp": "file",
+        "Zusammenhalt_slide_3.webp": "file"
+      },
+      "Chiemsee": {
+        "Chiemsee_mc.webp": "file",
+        "Chiemsee_preview.webp": "file",
+        "Chiemsee_slide1.webp": "file",
+        "Chiemsee_slide2.webp": "file",
+        "Chiemsee_slide3.webp": "file"
+      },
+      "Abstraktion I": {
+        "AbstraktionI_mc.webp": "file",
+        "AbstraktionI_preview.webp": "file",
+        "AbstraktionI_slide_1.webp": "file",
+        "AbstraktionI_slide_2.webp": "file",
+        "AbstraktionI_slide_3.webp": "file"
+      },
+      "Analog": {
+        "Analog_mc.webp": "file",
+        "Analog_preview.webp": "file",
+        "Analog_slide_1.webp": "file",
+        "Analog_slide_2.webp": "file",
+        "Analog_slide_3.webp": "file"
+      },
+      "Fassaden": {
+        "Fassaden_mc.webp": "file",
+        "Fassaden_preview.webp": "file",
+        "Fassaden_slide_1.webp": "file",
+        "Fassaden_slide_2.webp": "file",
+        "Fassaden_slide_3.webp": "file"
+      },
+      "Fuchs": {
+        "Fuchs_mc.webp": "file",
+        "Fuchs_preview.webp": "file",
+        "Fuchs_slide1.webp": "file",
+        "Fuchs_slide2.webp": "file",
+        "Fuchs_slide3.webp": "file"
+      },
+      "Hommage an Joan Miro": {
+        "HommageanJoanMiro_mc.webp": "file",
+        "HommageanJoanMiro_preview.webp": "file",
+        "HommageanJoanMiro_slide_1.webp": "file",
+        "HommageanJoanMiro_slide_2.webp": "file",
+        "HommageanJoanMiro_slide_3.webp": "file"
+      },
+      "Improvisation II": {
+        "ImprovisationII_mc.webp": "file",
+        "ImprovisationII_preview.jpg": "file",
+        "ImprovisationII_slide1.jpg": "file",
+        "ImprovisationII_slide2.jpg": "file",
+        "ImprovisationII_slide3.jpg": "file"
+      },
+      "Kopf, Ernst": {
+        "Kopf,Ernst_mc.webp": "file",
+        "Kopf,Ernst_preview.webp": "file",
+        "Kopf,Ernst_slide_1.webp": "file",
+        "Kopf,Ernst_slide_2.webp": "file",
+        "Kopf,Ernst_slide_3.webp": "file"
+      },
+      "Kopf, Kreide": {
+        "Kopf,Kreide_mc.webp": "file",
+        "Kopf,Kreide_preview.webp": "file",
+        "Kopf,Kreide_slide_1.webp": "file",
+        "Kopf,Kreide_slide_2.webp": "file",
+        "Kopf,Kreide_slide_3.webp": "file"
+      },
+      "linearer Körper": {
+        "Linear_mc.webp": "file",
+        "Linear_preview.jpg": "file",
+        "Linear_slide1.jpg": "file",
+        "Linear_slide2.jpg": "file",
+        "Linear_slide3.jpg": "file"
+      },
+      "Orangen": {
+        "Orangen_mc.webp": "file",
+        "Orangen_preview.webp": "file",
+        "Orangen_slide1.jpg": "file",
+        "Orangen_slide2.JPG": "file",
+        "Orangen_slide2.webp": "file",
+        "Orangen_slide3.webp": "file"
       },
       "Rainy theater night": {
         "Rainytheaternight_mc.webp": "file",
@@ -240,13 +300,6 @@
         "StudieIV_slide2.jpg": "file",
         "StudieIV_slide3.jpg": "file"
       },
-      "Tanz der Kaulquappen": {
-        "TanzderKaulquappen_mc.webp": "file",
-        "TanzderKaulquappen_preview.webp": "file",
-        "TanzderKaulquappen_slide_1.webp": "file",
-        "TanzderKaulquappen_slide_2.webp": "file",
-        "TanzderKaulquappen_slide_3.webp": "file"
-      },
       "Tentakeln": {
         "Tentakeln_mc.webp": "file",
         "Tentakeln_preview.webp": "file",
@@ -254,33 +307,12 @@
         "Tentakeln_slide_2.webp": "file",
         "Tentakeln_slide_3.webp": "file"
       },
-      "Tetraptychon": {
-        "Tetraptychon_mc.webp": "file",
-        "Tetraptychon_preview.png": "file",
-        "Tetraptychon_slide1.jpg": "file",
-        "Tetraptychon_slide2.jpg": "file",
-        "Tetraptychon_slide3.jpg": "file"
-      },
-      "Tropfen": {
-        "Tropfen_mc.webp": "file",
-        "Tropfen_preview.jpg": "file",
-        "Tropfen_slide1.jpg": "file",
-        "Tropfen_slide2.jpg": "file",
-        "Tropfen_slide3.jpg": "file"
-      },
       "trotzdem fröhlich": {
         "trotzdemfröhlich_mc.webp": "file",
         "trotzdemfröhlich_preview.webp": "file",
         "trotzdemfröhlich_slide_1.webp": "file",
         "trotzdemfröhlich_slide_2.webp": "file",
         "trotzdemfröhlich_slide_3.webp": "file"
-      },
-      "Tunis": {
-        "Tunis_mc.webp": "file",
-        "Tunis_preview.jpg": "file",
-        "Tunis_slide1.jpg": "file",
-        "Tunis_slide2.jpg": "file",
-        "Tunis_slide3.jpg": "file"
       },
       "unterwegs in fremde Galaxien": {
         "unterwegsinfremdeGalaxien_mc.webp": "file",
@@ -296,14 +328,6 @@
         "Vasen_slide_2.webp": "file",
         "Vasen_slide_3.webp": "file"
       },
-      "Visier": {
-        "Visier_mc.png": "file",
-        "Visier_mc.webp": "file",
-        "Visier_preview.webp": "file",
-        "Visier_slide1.webp": "file",
-        "Visier_slide2.webp": "file",
-        "Visier_slide3.webp": "file"
-      },
       "vom Engel berührt": {
         "vomEngelberührt_mc.png": "file",
         "vomEngelberührt_mc.webp": "file",
@@ -311,30 +335,6 @@
         "vomEngelberührt_slide_1.webp": "file",
         "vomEngelberührt_slide_2.webp": "file",
         "vomEngelberührt_slide_3.webp": "file"
-      },
-      "Von Blume zu Blume - von Mensch zu Mensch": {
-        "VonBlume_mc.png": "file",
-        "VonBlume_mc.webp": "file",
-        "VonBlume_preview.png": "file",
-        "VonBlume_slide1.jpg": "file",
-        "VonBlume_slide2.jpg": "file",
-        "VonBlume_slide3.jpg": "file"
-      },
-      "Wal": {
-        "Wal_mc.png": "file",
-        "Wal_mc.webp": "file",
-        "Wal_preview.webp": "file",
-        "Wal_slide1.webp": "file",
-        "Wal_slide2.webp": "file",
-        "Wal_slide3.webp": "file"
-      },
-      "Zusammenhalt": {
-        "Zusammenhalt_mc.png": "file",
-        "Zusammenhalt_mc.webp": "file",
-        "Zusammenhalt_preview.webp": "file",
-        "Zusammenhalt_slide_1.webp": "file",
-        "Zusammenhalt_slide_2.webp": "file",
-        "Zusammenhalt_slide_3.webp": "file"
       }
     },
     "adventcalender": {

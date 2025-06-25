@@ -66,9 +66,15 @@ async function loadGallery() {
             return;
         }
 
-        const responseDescriptions = await fetch('index.txt');
-        const textDescriptions = await responseDescriptions.text();
-        const descriptions = parseDescriptions(textDescriptions);
+        const responseDescriptions = await fetch('index.json');
+        const descriptionsArray = await responseDescriptions.json();
+        // Convert array to object for fast lookup by title
+        const descriptions = {};
+        descriptionsArray.forEach(desc => {
+            if (desc.title) {
+                descriptions[desc.title.trim()] = desc;
+            }
+        });
 
         for (const category in images) {
             const description = descriptions[category] || {};
@@ -288,29 +294,4 @@ function setupLightbox() {
     }
 }
 
-// ✅ Parse index.txt description format
-function parseDescriptions(text) {
-    const lines = text.split('\n');
-    const descriptions = {};
-    let currentTitle = '';
 
-    lines.forEach(line => {
-        const titleMatch = line.match(/"title":\s*(.*?);/);
-        const sizeMatch = line.match(/"ma\u00dfe":\s*(.*?);/);
-        const dateMatch = line.match(/"datum":\s*(.*?);/);
-        const techMatch = line.match(/"tech":\s*(.*?);/);
-
-        if (titleMatch) {
-            currentTitle = titleMatch[1].trim();
-            descriptions[currentTitle] = { title: currentTitle };
-        } else if (sizeMatch && currentTitle) {
-            descriptions[currentTitle].size = sizeMatch[1].trim();
-        } else if (dateMatch && currentTitle) {
-            descriptions[currentTitle].date = dateMatch[1].trim();
-        } else if (techMatch && currentTitle) {
-            descriptions[currentTitle].technique = techMatch[1].trim();
-        }
-    });
-
-    return descriptions;
-}

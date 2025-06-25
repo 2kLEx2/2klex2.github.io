@@ -88,11 +88,43 @@ html {
 
 /* Gallery Items */
 .gallery-item {
+    position: relative;
     width: 400px; 
     height: auto;
     object-fit: cover;
     cursor: pointer;
 }
+
+.gallery-item::after {
+    content: '\1F50D'; /* Unicode magnifier */
+    position: absolute;
+    bottom: 14px;
+    right: 20px;
+    font-size: 2.2rem;
+    color: rgba(255,255,255,0.85);
+    background: rgba(44,44,44,0.62);
+    border-radius: 50%;
+    padding: 0.18em 0.28em 0.12em 0.28em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.gallery-item.show-overlay::after,
+.gallery-item:hover::after,
+.gallery-item:focus::after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .gallery-item::after {
+        font-size: 1.6rem;
+        bottom: 10px;
+        right: 12px;
+    }
+}
+
 
 /* Enlarged Image */
 .enlarged-image {
@@ -191,8 +223,38 @@ html {
     max-height: 80%;
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+/* Lightbox slide animation */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.98);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 0.35s cubic-bezier(0.6,0.2,0.2,1) both;
+}
+.slide-right {
+  animation: slideInRight 0.35s cubic-bezier(0.6,0.2,0.2,1) both;
+}
+
 .lightbox-controls {
     position: absolute;
     top: 50%;

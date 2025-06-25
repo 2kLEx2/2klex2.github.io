@@ -321,13 +321,6 @@
         "unterwegsinfremdeGalaxien_slide_2.webp": "file",
         "unterwegsinfremdeGalaxien_slide_3.webp": "file"
       },
-      "Vasen": {
-        "Vasen_mc.webp": "file",
-        "Vasen_preview.webp": "file",
-        "Vasen_slide_1.webp": "file",
-        "Vasen_slide_2.webp": "file",
-        "Vasen_slide_3.webp": "file"
-      },
       "vom Engel berührt": {
         "vomEngelberührt_mc.png": "file",
         "vomEngelberührt_mc.webp": "file",
@@ -335,6 +328,13 @@
         "vomEngelberührt_slide_1.webp": "file",
         "vomEngelberührt_slide_2.webp": "file",
         "vomEngelberührt_slide_3.webp": "file"
+      },
+      "Vasen": {
+        "Vasen_mc.webp": "file",
+        "Vasen_preview.webp": "file",
+        "Vasen_slide_1.webp": "file",
+        "Vasen_slide_2.webp": "file",
+        "Vasen_slide_3.webp": "file"
       }
     },
     "adventcalender": {

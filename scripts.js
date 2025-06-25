@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[Lightbox Hint] DOMContentLoaded, overlay hint logic loaded');
+    // Periodically hint overlay on gallery items
+    const overlayHintKey = 'lightboxHintDismissed';
+    let overlayInterval = null;
+    function showOverlayHint() {
+        if (sessionStorage.getItem(overlayHintKey)) return;
+        console.log('[Lightbox Hint] Showing overlay on gallery items');
+        document.querySelectorAll('.gallery-item').forEach(item => item.classList.add('show-overlay'));
+        setTimeout(() => {
+            document.querySelectorAll('.gallery-item').forEach(item => item.classList.remove('show-overlay'));
+            console.log('[Lightbox Hint] Overlay removed');
+        }, 3000);
+    }
+    function startOverlayHint() {
+        if (sessionStorage.getItem(overlayHintKey)) return;
+        showOverlayHint();
+        overlayInterval = setInterval(showOverlayHint, 10000);
+    }
+    function stopOverlayHint() {
+        sessionStorage.setItem(overlayHintKey, '1');
+        if (overlayInterval) clearInterval(overlayInterval);
+        document.querySelectorAll('.gallery-item').forEach(item => item.classList.remove('show-overlay'));
+    }
+    startOverlayHint();
+    // Stop overlay hint when lightbox is opened
+    document.body.addEventListener('click', function(e) {
+        const target = e.target.closest('.gallery-item');
+        if (target && !sessionStorage.getItem(overlayHintKey)) {
+            stopOverlayHint();
+        }
+    }, true);
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const welcomeText = document.querySelector('.welcome h1');
@@ -253,9 +285,24 @@ function setupLightbox() {
         lightboxImg.src = '';
     });
 
+    function animateLightbox(direction) {
+        // Remove any existing animation classes
+        lightboxImg.classList.remove('slide-left', 'slide-right');
+        // Force reflow to restart animation if needed
+        void lightboxImg.offsetWidth;
+        // Add the new animation class
+        lightboxImg.classList.add(direction === 'left' ? 'slide-left' : 'slide-right');
+        // Remove the class after animation ends (so it can be reused)
+        lightboxImg.addEventListener('animationend', function handler() {
+            lightboxImg.classList.remove('slide-left', 'slide-right');
+            lightboxImg.removeEventListener('animationend', handler);
+        });
+    }
+
     prevBtn.addEventListener("click", () => {
         if (slideFiles.length > 0) {
             currentSlideIndex = (currentSlideIndex - 1 + slideFiles.length) % slideFiles.length;
+            animateLightbox('left');
             showCurrentSlide();
         }
     });
@@ -263,6 +310,7 @@ function setupLightbox() {
     nextBtn.addEventListener("click", () => {
         if (slideFiles.length > 0) {
             currentSlideIndex = (currentSlideIndex + 1) % slideFiles.length;
+            animateLightbox('right');
             showCurrentSlide();
         }
     });
@@ -289,8 +337,13 @@ function setupLightbox() {
     function handleSwipeGesture() {
         const swipeThreshold = 50;
         const distance = touchEndX - touchStartX;
-        if (distance > swipeThreshold) prevBtn.click();
-        else if (distance < -swipeThreshold) nextBtn.click();
+        if (distance > swipeThreshold) {
+            animateLightbox('left');
+            prevBtn.click();
+        } else if (distance < -swipeThreshold) {
+            animateLightbox('right');
+            nextBtn.click();
+        }
     }
 }
 

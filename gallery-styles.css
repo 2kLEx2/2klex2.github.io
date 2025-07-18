@@ -356,13 +356,28 @@ html {
   }
 
   .gallery-item {
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 
   .gallery-description {
     margin-left: 0;
     text-align: center;
+  }
+  
+  .gallery-indicator {
+    padding: 3px 8px;
+    margin-top: 8px;
+  }
+  
+  .gallery-dot {
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -494,4 +509,107 @@ html {
 
 .lightbox-dot.active {
     background-color: #fff;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Gallery indicators */
+.gallery-indicator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    z-index: 5;
+    cursor: pointer; /* Show pointer cursor to indicate clickable */
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #55555556;
+    border: 1px solid #33333323;
+    margin: 0 2px;
+}
+
+.gallery-dot.active {
+    background-color: #ffffff;
+    border-color: #555;
+}
+
+/* Image wrapper for positioning indicators */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Take full width of parent container */
+    max-width: 400px; /* Max width on desktop */
+}
+
+/* Make sure gallery items maintain their styling */
+.gallery-item {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3)); /* Add drop shadow to gallery images */
+}
+
+/* Remove drop shadow from lightbox images */
+.lightbox-img {
+    filter: none; /* Ensure no drop shadow in lightbox */
+}
+
+/* Sold flag for gallery items */
+.sold-flag {
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    background-color: rgba(255, 150, 160, 0.85);
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    transform: rotate(40deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 10;
+    pointer-events: none; /* Don't interfere with clicks */
+    font-family: 'Arial', sans-serif;
+    border-radius: 3px;
+}
+
+/* Sold status in description */
+.sold-status {
+    color: #9b9b9b;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .sold-flag {
+        top: 10px;
+        right: 10px;
+        padding: 3px 10px;
+        font-size: 14px;
+    }
 }

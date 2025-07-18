@@ -150,6 +150,9 @@ async function loadGallery() {
             imgElement.dataset.category = category;
             imgElement.dataset.slides = JSON.stringify(imageSet);
             imgElement.dataset.type = galleryType;
+            
+            // Calculate image count for indicator
+            const imageCount = Object.keys(imageSet).filter(name => /\.(webp|jpg|jpeg|png)$/i.test(name)).length;
 
             const tryLoad = () => {
                 if (fallbackIndex >= matchingFiles.length) {
@@ -167,22 +170,119 @@ async function loadGallery() {
 
             const textElement = document.createElement('div');
             textElement.classList.add('gallery-description');
+            
+            // Add sold status to description if item is sold
+            const soldStatus = description.sold ? '<p class="sold-status">SOLD</p>' : '';
+            
             textElement.innerHTML = `
                 <h3>${description.title || category}</h3>
                 <p><strong>Size:</strong> ${description.size || 'Unknown'}</p>
                 <p><strong>Date:</strong> ${description.date || 'Unknown'}</p>
                 <p><strong>Technique:</strong> ${description.technique || 'Unknown'}</p>
+                ${soldStatus}
             `;
+            
+            // We'll add the sold flag after the image wrapper is created
 
             itemContainer.appendChild(imgElement);
             itemContainer.appendChild(textElement);
+            
+            // Create a wrapper for the image regardless of count
+            const imageWrapper = document.createElement('div');
+            imageWrapper.classList.add('image-wrapper');
+            
+            // Replace the image with the wrapper
+            imgElement.parentNode.insertBefore(imageWrapper, imgElement);
+            imageWrapper.appendChild(imgElement);
+            
+            // Add sold flag to the image wrapper if the item is sold
+            if (description.sold) {
+                const soldFlag = document.createElement('div');
+                soldFlag.classList.add('sold-flag');
+                soldFlag.textContent = 'SOLD';
+                imageWrapper.appendChild(soldFlag);
+            }
+            
+            // Add indicator for multiple images if there are more than one image
+            if (imageCount > 1) {
+                const indicatorContainer = document.createElement('div');
+                indicatorContainer.classList.add('gallery-indicator');
+                
+                // Create dots based on number of images (max 5 dots)
+                const dotsToShow = Math.min(imageCount, 5);
+                for (let i = 0; i < dotsToShow; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('gallery-dot');
+                    indicatorContainer.appendChild(dot);
+                }
+                
+                // Add click event to the indicator to open lightbox
+                indicatorContainer.addEventListener('click', function(event) {
+                    // Prevent the click from propagating to parent elements
+                    event.stopPropagation();
+                    
+                    // Trigger the same click event as clicking on the image
+                    imgElement.click();
+                });
+                
+                // Highlight the first dot to indicate it's the current image
+                indicatorContainer.firstChild?.classList.add('active');
+                
+                // Add the indicator to the existing image wrapper
+                imageWrapper.appendChild(indicatorContainer);
+            }
+            
             galleryContainer.appendChild(itemContainer);
         }
 
         setupLightbox();
+        
+        // Start preloading all gallery images in the background
+        setTimeout(() => preloadGalleryImages(images), 2000);
     } catch (error) {
         console.error('Error loading gallery images or descriptions:', error);
     }
+}
+
+// Preload all gallery images in the background with low priority
+function preloadGalleryImages(images) {
+    // Create a queue of images to preload
+    const preloadQueue = [];
+    
+    // Add all images to the queue
+    for (const category in images) {
+        const imageSet = images[category];
+        const availableFiles = Object.keys(imageSet);
+        
+        // Prioritize preview images first
+        const previewImages = availableFiles.filter(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
+        const otherImages = availableFiles.filter(name => !/preview\.(webp|jpg|jpeg|png)$/i.test(name));
+        
+        // Add to queue with proper path construction
+        [...previewImages, ...otherImages].forEach(fileName => {
+            const folder = encodeURIComponent(category);
+            const galleryType = document.querySelector(`.gallery-item[data-category="${category}"]`)?.dataset.type || 'main';
+            const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+            preloadQueue.push(`${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`);
+        });
+    }
+    
+    // Process queue with delay to avoid blocking main thread
+    let index = 0;
+    function processNext() {
+        if (index >= preloadQueue.length) return;
+        
+        const img = new Image();
+        img.importance = 'low'; // Mark as low priority
+        img.loading = 'lazy'; // Use browser's lazy loading
+        img.src = preloadQueue[index++];
+        
+        // Process next image after a small delay
+        setTimeout(processNext, 100);
+    }
+    
+    // Start processing queue
+    processNext();
 }
 
 // ✅ Lightbox with swipe & fallback
@@ -193,6 +293,7 @@ function setupLightbox() {
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
     const dotContainer = document.getElementById('lightbox-dots');
+    const loadingSpinner = document.querySelector('.loading-spinner');
 
     let slideFiles = [];
     let currentSlideIndex = 0;
@@ -217,9 +318,14 @@ function setupLightbox() {
         if (fallbackIndex >= matchingFiles.length) {
             console.warn(`All formats failed for: ${slideFiles[currentSlideIndex].fullName}`);
             lightboxImg.src = '';
+            loadingSpinner.classList.add('hidden');
             return;
         }
 
+        // Show loading spinner
+        loadingSpinner.classList.remove('hidden');
+        lightboxImg.classList.add('hidden');
+        
         const fileName = matchingFiles[fallbackIndex++];
         const folder = encodeURIComponent(slideFiles[currentSlideIndex].category);
         const galleryType = document.querySelector(`.gallery-item[data-category="${slideFiles[currentSlideIndex].category}"]`)?.dataset.type || 'main';
@@ -238,6 +344,42 @@ function setupLightbox() {
         fallbackIndex = 0;
         tryLoadImage();
         updateDots();
+        
+        // Preload next and previous images
+        preloadAdjacentImages();
+    }
+    
+    function preloadAdjacentImages() {
+        if (slideFiles.length <= 1) return;
+        
+        // Calculate next and previous indices
+        const nextIndex = (currentSlideIndex + 1) % slideFiles.length;
+        const prevIndex = (currentSlideIndex - 1 + slideFiles.length) % slideFiles.length;
+        
+        // Preload next image
+        preloadImage(nextIndex);
+        
+        // Preload previous image
+        preloadImage(prevIndex);
+    }
+    
+    function preloadImage(index) {
+        const slideToPreload = slideFiles[index];
+        const imageSet = JSON.parse(document.querySelector(`.gallery-item[data-category="${slideToPreload.category}"]`).dataset.slides);
+        const availableFiles = Object.keys(imageSet);
+        const baseName = slideToPreload.fullName.replace(/\.(webp|jpg|jpeg|png)$/i, '');
+        const baseMatchRegex = new RegExp(`^${baseName}\\.(webp|jpg|jpeg|png)$`, 'i');
+        const filesToPreload = availableFiles.filter(name => baseMatchRegex.test(name));
+        filesToPreload.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+        
+        if (filesToPreload.length > 0) {
+            const preloadImg = new Image();
+            const fileName = filesToPreload[0];
+            const folder = encodeURIComponent(slideToPreload.category);
+            const galleryType = document.querySelector(`.gallery-item[data-category="${slideToPreload.category}"]`)?.dataset.type || 'main';
+            const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+            preloadImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
+        }
     }
 
     document.querySelectorAll(".gallery-item").forEach(img => {
@@ -275,14 +417,25 @@ function setupLightbox() {
             currentSlideIndex = 0;
             showCurrentSlide();
             lightbox.classList.remove("hidden");
+            
+            // Disable scrolling on the body when lightbox is open
+            document.body.style.overflow = 'hidden';
         });
     });
 
     lightboxImg.onerror = tryLoadImage;
+    
+    // Hide spinner and show image when loading completes
+    lightboxImg.onload = function() {
+        loadingSpinner.classList.add('hidden');
+        lightboxImg.classList.remove('hidden');
+    };
 
     closeBtn.addEventListener("click", () => {
         lightbox.classList.add("hidden");
         lightboxImg.src = '';
+        // Re-enable scrolling when lightbox is closed
+        document.body.style.overflow = '';
     });
 
     function animateLightbox(direction) {
@@ -319,6 +472,8 @@ function setupLightbox() {
         if (event.target === lightbox) {
             lightbox.classList.add("hidden");
             lightboxImg.src = '';
+            // Re-enable scrolling when lightbox is closed by clicking outside
+            document.body.style.overflow = '';
         }
     });
 

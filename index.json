@@ -21,13 +21,15 @@
     "title": "Mount Ama Dablam",
     "size": "80x100cm",
     "date": "07.2024",
-    "technique": "Acrylic on canvas"
+    "technique": "Acrylic on canvas",
+    "sold": true
   },
   {
     "title": "Chiemsee",
     "size": "70x50cm",
     "date": "12.2023",
-    "technique": "Acrylic on canvas"
+    "technique": "Acrylic on canvas",
+    "sold": true
   },
   {
     "title": "Flamants roses",
@@ -63,7 +65,8 @@
     "title": "Tropfen",
     "size": "21x30cm",
     "date": "12.2023",
-    "technique": "Acrylic on canvas"
+    "technique": "Acrylic on canvas",
+    "sold": true
   },
   {
     "title": "Pushing demons away",
@@ -75,7 +78,8 @@
     "title": "Fuchs",
     "size": "21x30cm",
     "date": "07.2024",
-    "technique": "Acrylic on paper"
+    "technique": "Acrylic on paper",
+    "sold": true
   },
   {
     "title": "Liebe - die Sonne der Welt",
@@ -345,7 +349,8 @@
     "title": "11",
     "size": "21x30cm",
     "date": "12.2024",
-    "technique": "Acrylic on paper"
+    "technique": "Acrylic on paper",
+    "sold": true
   },
   {
     "title": "12",

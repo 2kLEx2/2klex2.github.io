@@ -1,5 +1,104 @@
 {
   "images": {
+    "oil": {
+      "Atelierblick": {
+        "Atelierblick.preview.png": "file",
+        "Atelierblick.preview.webp": "file",
+        "Atelierblick.slide1.webp": "file",
+        "Atelierblick.slide2.webp": "file",
+        "Atelierblick.slide3.webp": "file"
+      },
+      "Clown": {
+        "Clown.preview.webp": "file",
+        "Clown.slide1.webp": "file",
+        "Clown.slide2.webp": "file",
+        "Clown.slide3.webp": "file"
+      },
+      "Figur im Raum No. I": {
+        "FigurimRaumNoI.preview.webp": "file",
+        "FigurimRaumNoI.slide1.webp": "file",
+        "FigurimRaumNoI.slide3.webp": "file",
+        "FigurimRaumNoi.slide2.webp": "file"
+      },
+      "Figur im Raum No. II": {
+        "FigurimRaumNoII.preview.webp": "file",
+        "FigurimRaumNoII.slide1.webp": "file",
+        "FigurimRaumNoII.slide2.webp": "file",
+        "FigurimRaumNoII.slide3.webp": "file"
+      },
+      "Figur im Raum No. III": {
+        "FigurimRaumNoIII.preview.webp": "file",
+        "FigurimRaumNoIII.slide1.webp": "file",
+        "FigurimRaumNoIII.slide2.webp": "file",
+        "FigurimRaumNoIII.slide3.webp": "file"
+      },
+      "Kastanien No.I": {
+        "KastanienNoI.preview.webp": "file",
+        "KastanienNoI.slide1.webp": "file",
+        "KastanienNoI.slide2.webp": "file",
+        "KastanienNoI.slide3.webp": "file"
+      },
+      "Kastanien No.II": {
+        "KastanienNoII.preview.webp": "file",
+        "KastanienNoII.slide1.webp": "file",
+        "KastanienNoII.slide2.webp": "file",
+        "KastanienNoII.slide3.webp": "file"
+      },
+      "Kerze": {
+        "Kerze.preview.webp": "file",
+        "Kerze.slide1.webp": "file",
+        "Kerze.slide2.webp": "file",
+        "Kerze.slide3.webp": "file"
+      },
+      "Körper": {
+        "Körper.preview.webp": "file",
+        "Körper.slide1.webp": "file",
+        "Körper.slide2.webp": "file",
+        "Körper.slide3.webp": "file"
+      },
+      "Landschaft No. I": {
+        "LandschaftNoI.preview.webp": "file",
+        "LandschaftNoI.slide1.webp": "file",
+        "LandschaftNoI.slide2.webp": "file",
+        "LandschaftNoI.slide3.webp": "file"
+      },
+      "Landschaft No. II": {
+        "LandschaftNoII.preview.webp": "file",
+        "LandschaftNoII.slide1.webp": "file",
+        "LandschaftNoII.slide2.webp": "file",
+        "LandschaftNoII.slide3.webp": "file"
+      },
+      "MenschundTier": {
+        "MenschundTier.preview.webp": "file",
+        "MenschundTier.slide1.webp": "file",
+        "MenschundTier.slide2.webp": "file",
+        "MenschundTier.slide3.webp": "file"
+      },
+      "SchlossHerrenchiemsee": {
+        "SchlossHerrenchiemsee.preview.webp": "file",
+        "SchlossHerrenchiemsee.slide1.webp": "file",
+        "SchlossHerrenchiemsee.slide2.webp": "file",
+        "SchlossHerrenchiemsee.slide3.webp": "file"
+      },
+      "Stillleben No. I": {
+        "StilllebenNoI.preview.webp": "file",
+        "StilllebenNoI.slide1.webp": "file",
+        "StilllebenNoI.slide2.webp": "file",
+        "StilllebenNoI.slide3.webp": "file"
+      },
+      "Stillleben No. II": {
+        "StilllebenNoII.preview.webp": "file",
+        "StilllebenNoII.slide1.webp": "file",
+        "StilllebenNoII.slide2.webp": "file",
+        "StilllebenNoII.slide3.webp": "file"
+      },
+      "StudioView": {
+        "StudioView.preview.webp": "file",
+        "StudioView.slide1.webp": "file",
+        "StudioView.slide2.webp": "file",
+        "StudioView.slide3.webp": "file"
+      }
+    },
     "main": {
       "Dritte Schicht": {
         "DritteSchicht_mc.webp": "file",

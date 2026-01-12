@@ -161,7 +161,12 @@ async function loadGallery() {
                     return;
                 }
                 const fileName = matchingFiles[fallbackIndex++];
-                const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+                let pathPrefix = 'images/main';
+                if (galleryType === 'adventcalender') {
+                    pathPrefix = 'images/adventcalender';
+                } else if (galleryType === 'oil') {
+                    pathPrefix = 'images/oil';
+                }
                 imgElement.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
             };
 
@@ -262,7 +267,12 @@ function preloadGalleryImages(images) {
         [...previewImages, ...otherImages].forEach(fileName => {
             const folder = encodeURIComponent(category);
             const galleryType = document.querySelector(`.gallery-item[data-category="${category}"]`)?.dataset.type || 'main';
-            const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+            let pathPrefix = 'images/main';
+            if (galleryType === 'adventcalender') {
+                pathPrefix = 'images/adventcalender';
+            } else if (galleryType === 'oil') {
+                pathPrefix = 'images/oil';
+            }
             preloadQueue.push(`${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`);
         });
     }
@@ -329,7 +339,12 @@ function setupLightbox() {
         const fileName = matchingFiles[fallbackIndex++];
         const folder = encodeURIComponent(slideFiles[currentSlideIndex].category);
         const galleryType = document.querySelector(`.gallery-item[data-category="${slideFiles[currentSlideIndex].category}"]`)?.dataset.type || 'main';
-        const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+        let pathPrefix = 'images/main';
+        if (galleryType === 'adventcalender') {
+            pathPrefix = 'images/adventcalender';
+        } else if (galleryType === 'oil') {
+            pathPrefix = 'images/oil';
+        }
         lightboxImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
     }
 
@@ -377,7 +392,12 @@ function setupLightbox() {
             const fileName = filesToPreload[0];
             const folder = encodeURIComponent(slideToPreload.category);
             const galleryType = document.querySelector(`.gallery-item[data-category="${slideToPreload.category}"]`)?.dataset.type || 'main';
-            const pathPrefix = galleryType === 'adventcalender' ? 'images/adventcalender' : 'images/main';
+            let pathPrefix = 'images/main';
+            if (galleryType === 'adventcalender') {
+                pathPrefix = 'images/adventcalender';
+            } else if (galleryType === 'oil') {
+                pathPrefix = 'images/oil';
+            }
             preloadImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
         }
     }

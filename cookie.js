@@ -4,14 +4,14 @@ const declineBtn = document.getElementById("cookie-decline");
 
 function enableGA() {
   const gtagScript = document.createElement("script");
-  gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // Replace with your ID
+  gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-JSZ1DEH2NP";
   gtagScript.async = true;
   document.head.appendChild(gtagScript);
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true }); // Replace with your ID
+  gtag('config', 'G-JSZ1DEH2NP', { anonymize_ip: true });
 }
 
 // Check if user already responded

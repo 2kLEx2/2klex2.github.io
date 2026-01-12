@@ -2,7 +2,6 @@
   "images": {
     "oil": {
       "Atelierblick": {
-        "Atelierblick.preview.png": "file",
         "Atelierblick.preview.webp": "file",
         "Atelierblick.slide1.webp": "file",
         "Atelierblick.slide2.webp": "file",
@@ -32,13 +31,13 @@
         "FigurimRaumNoIII.slide2.webp": "file",
         "FigurimRaumNoIII.slide3.webp": "file"
       },
-      "Kastanien No.I": {
+      "Kastanien No. I": {
         "KastanienNoI.preview.webp": "file",
         "KastanienNoI.slide1.webp": "file",
         "KastanienNoI.slide2.webp": "file",
         "KastanienNoI.slide3.webp": "file"
       },
-      "Kastanien No.II": {
+      "Kastanien No. II": {
         "KastanienNoII.preview.webp": "file",
         "KastanienNoII.slide1.webp": "file",
         "KastanienNoII.slide2.webp": "file",

@@ -167,7 +167,12 @@ async function loadGallery() {
                 } else if (galleryType === 'oil') {
                     pathPrefix = 'images/oil';
                 }
-                imgElement.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
+                // Handle special cases where folder names don't match titles
+                let folderName = category;
+                if (category === "Mensch und Tier") folderName = "MenschundTier";
+                if (category === "Schloss Herrenchiemsee") folderName = "SchlossHerrenchiemsee";
+                if (category === "Studioview") folderName = "StudioView";
+                imgElement.src = `${pathPrefix}/${encodeURIComponent(folderName)}/${encodeURIComponent(fileName)}`;
             };
 
             imgElement.onerror = tryLoad;
@@ -337,15 +342,20 @@ function setupLightbox() {
         lightboxImg.classList.add('hidden');
         
         const fileName = matchingFiles[fallbackIndex++];
-        const folder = encodeURIComponent(slideFiles[currentSlideIndex].category);
-        const galleryType = document.querySelector(`.gallery-item[data-category="${slideFiles[currentSlideIndex].category}"]`)?.dataset.type || 'main';
+        const category = slideFiles[currentSlideIndex].category;
+        const galleryType = document.querySelector(`.gallery-item[data-category="${category}"]`)?.dataset.type || 'main';
         let pathPrefix = 'images/main';
         if (galleryType === 'adventcalender') {
             pathPrefix = 'images/adventcalender';
         } else if (galleryType === 'oil') {
             pathPrefix = 'images/oil';
         }
-        lightboxImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
+        // Handle special cases where folder names don't match titles
+        let folderName = category;
+        if (category === "Mensch und Tier") folderName = "MenschundTier";
+        if (category === "Schloss Herrenchiemsee") folderName = "SchlossHerrenchiemsee";
+        if (category === "Studioview") folderName = "StudioView";
+        lightboxImg.src = `${pathPrefix}/${encodeURIComponent(folderName)}/${encodeURIComponent(fileName)}`;
     }
 
     function showCurrentSlide() {
@@ -390,15 +400,20 @@ function setupLightbox() {
         if (filesToPreload.length > 0) {
             const preloadImg = new Image();
             const fileName = filesToPreload[0];
-            const folder = encodeURIComponent(slideToPreload.category);
-            const galleryType = document.querySelector(`.gallery-item[data-category="${slideToPreload.category}"]`)?.dataset.type || 'main';
+            const category = slideToPreload.category;
+            const galleryType = document.querySelector(`.gallery-item[data-category="${category}"]`)?.dataset.type || 'main';
             let pathPrefix = 'images/main';
             if (galleryType === 'adventcalender') {
                 pathPrefix = 'images/adventcalender';
             } else if (galleryType === 'oil') {
                 pathPrefix = 'images/oil';
             }
-            preloadImg.src = `${pathPrefix}/${folder}/${encodeURIComponent(fileName)}`;
+            // Handle special cases where folder names don't match titles
+            let folderName = category;
+            if (category === "Mensch und Tier") folderName = "MenschundTier";
+            if (category === "Schloss Herrenchiemsee") folderName = "SchlossHerrenchiemsee";
+            if (category === "Studioview") folderName = "StudioView";
+            preloadImg.src = `${pathPrefix}/${encodeURIComponent(folderName)}/${encodeURIComponent(fileName)}`;
         }
     }
 

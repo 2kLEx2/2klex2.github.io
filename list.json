@@ -1,6 +1,48 @@
 {
   "images": {
     "oil": {
+      "Hamburg": {
+        "Hamburg.preview.jpg": "file",
+        "Hamburg.slide1.jpg": "file",
+        "Hamburg.slide2.jpg": "file",
+        "Hamburg.slide3.jpg": "file"
+      },
+      "Landungsbrücken": {
+        "Landungsbrücken.preview.jpg": "file",
+        "Landungsbrücken.slide1.jpg": "file",
+        "Landungsbrücken.slide2.jpg": "file",
+        "Landungsbrücken.slide3.jpg": "file"
+      },
+      "Ziemlich beste Freunde": {
+        "ZiemlichbesteFreunde.preview.jpeg": "file",
+        "ZiemlichbesteFreunde.slide1.jpeg": "file",
+        "ZiemlichbesteFreunde.slide2.jpeg": "file",
+        "ZiemlichbesteFreunde.slide3.jpg": "file"
+      },
+      "Detail": {
+        "Detail.preview.jpg": "file",
+        "Detail.slide1.jpeg": "file",
+        "Detail.slide2.jpeg": "file",
+        "Detail.slide3.jpeg": "file"
+      },
+      "Kastanien No. I": {
+        "KastanienNoI.preview.webp": "file",
+        "KastanienNoI.slide1.webp": "file",
+        "KastanienNoI.slide2.webp": "file",
+        "KastanienNoI.slide3.webp": "file"
+      },
+      "Kastanien No. II": {
+        "KastanienNoII.preview.webp": "file",
+        "KastanienNoII.slide1.webp": "file",
+        "KastanienNoII.slide2.webp": "file",
+        "KastanienNoII.slide3.webp": "file"
+      },
+      "Kerze": {
+        "Kerze.preview.webp": "file",
+        "Kerze.slide1.webp": "file",
+        "Kerze.slide2.webp": "file",
+        "Kerze.slide3.webp": "file"
+      },
       "Atelierblick": {
         "Atelierblick.preview.webp": "file",
         "Atelierblick.slide1.webp": "file",
@@ -30,24 +72,6 @@
         "FigurimRaumNoIII.slide1.webp": "file",
         "FigurimRaumNoIII.slide2.webp": "file",
         "FigurimRaumNoIII.slide3.webp": "file"
-      },
-      "Kastanien No. I": {
-        "KastanienNoI.preview.webp": "file",
-        "KastanienNoI.slide1.webp": "file",
-        "KastanienNoI.slide2.webp": "file",
-        "KastanienNoI.slide3.webp": "file"
-      },
-      "Kastanien No. II": {
-        "KastanienNoII.preview.webp": "file",
-        "KastanienNoII.slide1.webp": "file",
-        "KastanienNoII.slide2.webp": "file",
-        "KastanienNoII.slide3.webp": "file"
-      },
-      "Kerze": {
-        "Kerze.preview.webp": "file",
-        "Kerze.slide1.webp": "file",
-        "Kerze.slide2.webp": "file",
-        "Kerze.slide3.webp": "file"
       },
       "Körper": {
         "Körper.preview.webp": "file",
@@ -99,6 +123,99 @@
       }
     },
     "main": {
+      "Rainy theater night": {
+        "Rainytheaternight_mc.webp": "file",
+        "Rainytheaternight_preview.webp": "file",
+        "Rainytheaternight_slide_1.webp": "file",
+        "Rainytheaternight_slide_2.webp": "file",
+        "Rainytheaternight_slide_3.webp": "file"
+      },
+      "Studie I": {
+        "StudieI_mc.webp": "file",
+        "StudieI_preview.jpg": "file",
+        "StudieI_slide1.jpg": "file",
+        "StudieI_slide2.jpg": "file",
+        "StudieI_slide3.jpg": "file"
+      },
+      "linearer Körper": {
+        "Linear_mc.webp": "file",
+        "Linear_preview.jpg": "file",
+        "Linear_slide1.jpg": "file",
+        "Linear_slide2.jpg": "file",
+        "Linear_slide3.jpg": "file"
+      },
+      "Fuchs": {
+        "Fuchs_mc.webp": "file",
+        "Fuchs_preview.webp": "file",
+        "Fuchs_slide1.webp": "file",
+        "Fuchs_slide2.webp": "file",
+        "Fuchs_slide3.webp": "file"
+      },
+      "Orangen": {
+        "Orangen_mc.webp": "file",
+        "Orangen_preview.webp": "file",
+        "Orangen_slide1.jpg": "file",
+        "Orangen_slide2.JPG": "file",
+        "Orangen_slide2.webp": "file",
+        "Orangen_slide3.webp": "file"
+      },
+      "Fluid": {
+        "Fluid_mc.webp": "file",
+        "Fluid_preview.webp": "file",
+        "Fluid_slide1.webp": "file",
+        "Fluid_slide2.webp": "file",
+        "Fluid_slide3.webp": "file"
+      },
+      "Flamants roses": {
+        "FlamantsRoses_mc.webp": "file",
+        "FlamantsRoses_preview.webp": "file",
+        "FlamantsRoses_slide1.webp": "file",
+        "FlamantsRoses_slide2.webp": "file",
+        "FlamantsRoses_slide3.webp": "file"
+      },
+      "Lichtblick": {
+        "Lichblick_preview.webp": "file",
+        "Lichtblick_mc.webp": "file",
+        "Lichtblick_slide1.webp": "file",
+        "Lichtblick_slide2.webp": "file",
+        "Lichtblick_slide3.webp": "file"
+      },
+      "Chiemsee": {
+        "Chiemsee_mc.webp": "file",
+        "Chiemsee_preview.webp": "file",
+        "Chiemsee_slide1.webp": "file",
+        "Chiemsee_slide2.webp": "file",
+        "Chiemsee_slide3.webp": "file"
+      },
+      "Tunis": {
+        "Tunis_mc.webp": "file",
+        "Tunis_preview.jpg": "file",
+        "Tunis_slide1.jpg": "file",
+        "Tunis_slide2.jpg": "file",
+        "Tunis_slide3.jpg": "file"
+      },
+      "Wal": {
+        "Wal_mc.png": "file",
+        "Wal_mc.webp": "file",
+        "Wal_preview.webp": "file",
+        "Wal_slide1.webp": "file",
+        "Wal_slide2.webp": "file",
+        "Wal_slide3.webp": "file"
+      },
+      "Mount Ama Dablam": {
+        "Mount_mc.webp": "file",
+        "Mount_preview.jpg": "file",
+        "Mount_slide1.jpg": "file",
+        "Mount_slide2.jpg": "file",
+        "Mount_slide3.jpg": "file"
+      },
+      "Liebe - die Sonne der Welt": {
+        "Liebe_mc.webp": "file",
+        "Liebe_preview.webp": "file",
+        "Liebe_slide1.webp": "file",
+        "Liebe_slide2.webp": "file",
+        "Liebe_slide3.webp": "file"
+      },
       "Dritte Schicht": {
         "DritteSchicht_mc.webp": "file",
         "DritteSchicht_preview.webp": "file",
@@ -112,20 +229,6 @@
         "einsam_slide1.webp": "file",
         "einsam_slide2.webp": "file",
         "einsam_slide3.webp": "file"
-      },
-      "Flamants roses": {
-        "FlamantsRoses_mc.webp": "file",
-        "FlamantsRoses_preview.webp": "file",
-        "FlamantsRoses_slide1.webp": "file",
-        "FlamantsRoses_slide2.webp": "file",
-        "FlamantsRoses_slide3.webp": "file"
-      },
-      "Fluid": {
-        "Fluid_mc.webp": "file",
-        "Fluid_preview.webp": "file",
-        "Fluid_slide1.webp": "file",
-        "Fluid_slide2.webp": "file",
-        "Fluid_slide3.webp": "file"
       },
       "getroffen": {
         "getroffen_mc.webp": "file",
@@ -176,27 +279,6 @@
         "Kopf,orange_slide_2.webp": "file",
         "Kopf,orange_slide_3.webp": "file"
       },
-      "Lichtblick": {
-        "Lichblick_preview.webp": "file",
-        "Lichtblick_mc.webp": "file",
-        "Lichtblick_slide1.webp": "file",
-        "Lichtblick_slide2.webp": "file",
-        "Lichtblick_slide3.webp": "file"
-      },
-      "Liebe - die Sonne der Welt": {
-        "Liebe_mc.webp": "file",
-        "Liebe_preview.webp": "file",
-        "Liebe_slide1.webp": "file",
-        "Liebe_slide2.webp": "file",
-        "Liebe_slide3.webp": "file"
-      },
-      "Mount Ama Dablam": {
-        "Mount_mc.webp": "file",
-        "Mount_preview.jpg": "file",
-        "Mount_slide1.jpg": "file",
-        "Mount_slide2.jpg": "file",
-        "Mount_slide3.jpg": "file"
-      },
       "Organe": {
         "Organe_mc.webp": "file",
         "Organe_preview.webp": "file",
@@ -239,13 +321,6 @@
         "Tropfen_slide2.jpg": "file",
         "Tropfen_slide3.jpg": "file"
       },
-      "Tunis": {
-        "Tunis_mc.webp": "file",
-        "Tunis_preview.jpg": "file",
-        "Tunis_slide1.jpg": "file",
-        "Tunis_slide2.jpg": "file",
-        "Tunis_slide3.jpg": "file"
-      },
       "Visier": {
         "Visier_mc.png": "file",
         "Visier_mc.webp": "file",
@@ -262,14 +337,6 @@
         "VonBlume_slide2.jpg": "file",
         "VonBlume_slide3.jpg": "file"
       },
-      "Wal": {
-        "Wal_mc.png": "file",
-        "Wal_mc.webp": "file",
-        "Wal_preview.webp": "file",
-        "Wal_slide1.webp": "file",
-        "Wal_slide2.webp": "file",
-        "Wal_slide3.webp": "file"
-      },
       "Zusammenhalt": {
         "Zusammenhalt_mc.png": "file",
         "Zusammenhalt_mc.webp": "file",
@@ -277,13 +344,6 @@
         "Zusammenhalt_slide_1.webp": "file",
         "Zusammenhalt_slide_2.webp": "file",
         "Zusammenhalt_slide_3.webp": "file"
-      },
-      "Chiemsee": {
-        "Chiemsee_mc.webp": "file",
-        "Chiemsee_preview.webp": "file",
-        "Chiemsee_slide1.webp": "file",
-        "Chiemsee_slide2.webp": "file",
-        "Chiemsee_slide3.webp": "file"
       },
       "Abstraktion I": {
         "AbstraktionI_mc.webp": "file",
@@ -305,13 +365,6 @@
         "Fassaden_slide_1.webp": "file",
         "Fassaden_slide_2.webp": "file",
         "Fassaden_slide_3.webp": "file"
-      },
-      "Fuchs": {
-        "Fuchs_mc.webp": "file",
-        "Fuchs_preview.webp": "file",
-        "Fuchs_slide1.webp": "file",
-        "Fuchs_slide2.webp": "file",
-        "Fuchs_slide3.webp": "file"
       },
       "Hommage an Joan Miro": {
         "HommageanJoanMiro_mc.webp": "file",
@@ -341,41 +394,12 @@
         "Kopf,Kreide_slide_2.webp": "file",
         "Kopf,Kreide_slide_3.webp": "file"
       },
-      "linearer Körper": {
-        "Linear_mc.webp": "file",
-        "Linear_preview.jpg": "file",
-        "Linear_slide1.jpg": "file",
-        "Linear_slide2.jpg": "file",
-        "Linear_slide3.jpg": "file"
-      },
-      "Orangen": {
-        "Orangen_mc.webp": "file",
-        "Orangen_preview.webp": "file",
-        "Orangen_slide1.jpg": "file",
-        "Orangen_slide2.JPG": "file",
-        "Orangen_slide2.webp": "file",
-        "Orangen_slide3.webp": "file"
-      },
-      "Rainy theater night": {
-        "Rainytheaternight_mc.webp": "file",
-        "Rainytheaternight_preview.webp": "file",
-        "Rainytheaternight_slide_1.webp": "file",
-        "Rainytheaternight_slide_2.webp": "file",
-        "Rainytheaternight_slide_3.webp": "file"
-      },
       "Schöne, afrikanisch": {
         "Schöne,afrikanisch_mc.webp": "file",
         "Schöne,afrikanisch_preview.webp": "file",
         "Schöne,afrikanisch_slide_1.webp": "file",
         "Schöne,afrikanisch_slide_2.webp": "file",
         "Schöne,afrikanisch_slide_3.webp": "file"
-      },
-      "Studie I": {
-        "StudieI_mc.webp": "file",
-        "StudieI_preview.jpg": "file",
-        "StudieI_slide1.jpg": "file",
-        "StudieI_slide2.jpg": "file",
-        "StudieI_slide3.jpg": "file"
       },
       "Studie II": {
         "StudieII_mc.webp": "file",

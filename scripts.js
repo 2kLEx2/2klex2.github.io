@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Put .webp files first; everything else keeps its list.json order (sort is stable)
+const webpFirst = (a, b) => b.toLowerCase().endsWith('.webp') - a.toLowerCase().endsWith('.webp');
+
 // ✅ Load gallery images
 async function loadGallery() {
     const galleryContainer = document.getElementById('gallery');
@@ -130,14 +133,14 @@ async function loadGallery() {
             const previewCandidates = availableFiles.filter(name => /preview\.(webp|jpg|jpeg|png)$/i.test(name));
             if (previewCandidates.length === 0) continue;
 
-            previewCandidates.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+            previewCandidates.sort(webpFirst);
             const previewFile = previewCandidates[0];
             const folder = encodeURIComponent(category);
             const fileBase = previewFile.replace(/\.(webp|jpg|jpeg|png)$/i, '');
 
             const baseMatchRegex = new RegExp(`^${fileBase}\\.(webp|jpg|jpeg|png)$`, 'i');
             const matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
-            matchingFiles.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+            matchingFiles.sort(webpFirst);
 
             let fallbackIndex = 0;
             const itemContainer = document.createElement('div');
@@ -365,7 +368,7 @@ function setupLightbox() {
         const baseName = current.fullName.replace(/\.(webp|jpg|jpeg|png)$/i, '');
         const baseMatchRegex = new RegExp(`^${baseName}\\.(webp|jpg|jpeg|png)$`, 'i');
         matchingFiles = availableFiles.filter(name => baseMatchRegex.test(name));
-        matchingFiles.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+        matchingFiles.sort(webpFirst);
         fallbackIndex = 0;
         tryLoadImage();
         updateDots();
@@ -395,7 +398,7 @@ function setupLightbox() {
         const baseName = slideToPreload.fullName.replace(/\.(webp|jpg|jpeg|png)$/i, '');
         const baseMatchRegex = new RegExp(`^${baseName}\\.(webp|jpg|jpeg|png)$`, 'i');
         const filesToPreload = availableFiles.filter(name => baseMatchRegex.test(name));
-        filesToPreload.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+        filesToPreload.sort(webpFirst);
         
         if (filesToPreload.length > 0) {
             const preloadImg = new Image();
@@ -430,7 +433,7 @@ function setupLightbox() {
             if (galleryType === 'adventcalender') {
                 // Load all image files regardless of naming
                 all = availableFiles.filter(name => /\.(webp|jpg|jpeg|png)$/i.test(name));
-                all.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+                all.sort(webpFirst);
             } else {
                 // Original logic for other types
                 const preview = availableFiles.find(name =>
@@ -443,7 +446,7 @@ function setupLightbox() {
                 );
 
                 const rest = [...slides, ...mcImages].filter(name => name !== preview);
-                rest.sort((a, b) => a.toLowerCase().endsWith('.webp') ? -1 : 1);
+                rest.sort(webpFirst);
                 all = preview ? [preview, ...rest] : rest;
             }
 

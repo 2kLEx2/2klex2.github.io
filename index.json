@@ -1,25 +1,61 @@
 [
   {
+    "title": "Wo die Häuser kippen",
+    "size": "100x80cm",
+    "date": "06.2026",
+    "technique": "Oil on canvas"
+  },
+  {
+    "title": "Dune",
+    "size": "40x50cm",
+    "date": "06.2026",
+    "technique": "Oil on canvas"
+  },
+  {
+    "title": "Reflexion I",
+    "size": "64x50cm",
+    "date": "06.2026",
+    "technique": "Oil on paper"
+  },
+  {
+    "title": "Murano",
+    "size": "64x50cm",
+    "date": "05.2026",
+    "technique": "Oil on paper"
+  },
+  {
+    "title": "Reflexion II",
+    "size": "64x50cm",
+    "date": "05.2026",
+    "technique": "Oil on paper"
+  },
+  {
+    "title": "In the privacy of your home",
+    "size": "64x50cm",
+    "date": "04.2026",
+    "technique": "Oil on paper"
+  },
+  {
     "title": "Detail",
-    "size": "30,5x37cm",
+    "size": "37x30,5cm",
     "date": "02.2026",
     "technique": "Oil on paper"
   },
   {
     "title": "Hamburg",
-    "size": "50x64cm",
+    "size": "64x50cm",
     "date": "04.2026",
     "technique": "Oil on paper"
   },
   {
     "title": "Landungsbrücken",
-    "size": "50x64cm",
+    "size": "64x50cm",
     "date": "04.2026",
     "technique": "Oil on paper"
   },
   {
     "title": "Ziemlich beste Freunde",
-    "size": "47x31cm",
+    "size": "31x47cm",
     "date": "02.2026",
     "technique": "Oil on paper"
   },
@@ -121,168 +157,169 @@
   },
   {
     "title": "Tunis",
-    "size": "70x100cm",
+    "size": "100x70cm",
     "date": "11.2023",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Wal",
-    "size": "50x70cm",
+    "size": "70x50cm",
     "date": "12.2023",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Visier",
-    "size": "70x80cm",
+    "size": "80x70cm",
     "date": "05.2024",
-    "technique": "Acrylic on canvas"
+    "technique": "Acrylic on canvas",
+    "sold": true
   },
   {
     "title": "Mount Ama Dablam",
-    "size": "80x100cm",
+    "size": "100x80cm",
     "date": "07.2024",
     "technique": "Acrylic on canvas",
     "sold": true
   },
   {
     "title": "Chiemsee",
-    "size": "70x50cm",
+    "size": "50x70cm",
     "date": "12.2023",
     "technique": "Acrylic on canvas",
     "sold": true
   },
   {
     "title": "Flamants roses",
-    "size": "70x140cm",
+    "size": "140x70cm",
     "date": "02.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Dritte Schicht",
-    "size": "50x70cm",
+    "size": "70x50cm",
     "date": "01.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "einsam",
-    "size": "30x70cm",
+    "size": "70x30cm",
     "date": "03.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Fluid",
-    "size": "70x140cm",
+    "size": "140x70cm",
     "date": "11.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Lichtblick",
-    "size": "70x100cm",
+    "size": "100x70cm",
     "date": "05.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Tropfen",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2023",
     "technique": "Acrylic on canvas",
     "sold": true
   },
   {
     "title": "Pushing demons away",
-    "size": "70x100cm",
+    "size": "100x70cm",
     "date": "11.2023",
     "technique": "Acrylic and fineliner on canvas"
   },
   {
     "title": "Fuchs",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "07.2024",
     "technique": "Acrylic on paper",
     "sold": true
   },
   {
     "title": "Liebe - die Sonne der Welt",
-    "size": "50x70cm",
+    "size": "70x50cm",
     "date": "03.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "getroffen",
-    "size": "40x50cm",
+    "size": "50x40cm",
     "date": "11.2023",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Konvex - Konkav",
-    "size": "50x70cm & 40x50cm",
+    "size": "70x50cm & 50x40cm",
     "date": "01.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Kirschblüte",
-    "size": "30x70cm",
+    "size": "70x30cm",
     "date": "01.2024",
     "technique": "Acrylic and shredder-paper on canvas"
   },
   {
     "title": "Von Blume zu Blume - von Mensch zu Mensch",
-    "size": "30x70cm & 40x50cm",
+    "size": "70x30cm & 50x40cm",
     "date": "01.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Improvisation I",
-    "size": "50x70cm",
+    "size": "70x50cm",
     "date": "03.2024",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Kitschbild",
-    "size": "70x100cm",
+    "size": "100x70cm",
     "date": "10.2023",
     "technique": "Acrylic on canvas"
   },
   {
     "title": "Tetraptychon",
-    "size": "4x 30x40cm",
+    "size": "4x 40x30cm",
     "date": "01.2024",
     "technique": "Acrylic and shredder paper on canvas"
   },
   {
     "title": "Orangen",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "10.2023",
     "technique": "Acrylic on paper"
   },
   {
     "title": "linearer Körper",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "10.2023",
     "technique": "Fineliner on paper"
   },
   {
     "title": "Studie I",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "06.2021",
     "technique": "Acrylic on paper",
     "sold": true
   },
   {
     "title": "Studie II",
-    "size": "30x42cm",
+    "size": "42x30cm",
     "date": "05.2021",
     "technique": "Acrylic on paper"
   },
   {
     "title": "Studie III",
-    "size": "30x42cm",
+    "size": "42x30cm",
     "date": "05.2021",
     "technique": "Acrylic on paper"
   },
   {
     "title": "Studie IV",
-    "size": "3x 21x30cm",
+    "size": "3x 30x21cm",
     "date": "06.2021",
     "technique": "Acrylic on paper"
   },
@@ -312,7 +349,7 @@
   },
   {
     "title": "Knöpfe",
-    "size": "50x70cm",
+    "size": "70x50cm",
     "date": "03.2025",
     "technique": "Buttons and acrylic on canvas"
   },
@@ -330,7 +367,7 @@
   },
   {
     "title": "Kopf, orange",
-    "size": "24x30cm",
+    "size": "30x24cm",
     "date": "02.2025",
     "technique": "Acrylic on canvas"
   },
@@ -342,7 +379,7 @@
   },
   {
     "title": "Phönix",
-    "size": "80x100cm",
+    "size": "100x80cm",
     "date": "01.2025",
     "technique": "Acrylic and shredder paper on canvas"
   },
@@ -396,7 +433,7 @@
   },
   {
     "title": "Zusammenhalt",
-    "size": "80x100cm",
+    "size": "100x80cm",
     "date": "02.2025",
     "technique": "Acrylic on canvas"
   },
@@ -408,146 +445,146 @@
   },
   {
     "title": "1",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "2",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "3",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "4",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "5",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "6",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "7",
-    "size": "21.30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "8",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "9",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "10",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "11",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper",
     "sold": true
   },
   {
     "title": "12",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "13",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "14",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "15",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "16",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "17",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "18",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "19",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "20",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "21",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "22",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "23",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   },
   {
     "title": "24",
-    "size": "21x30cm",
+    "size": "30x21cm",
     "date": "12.2024",
     "technique": "Acrylic on paper"
   }

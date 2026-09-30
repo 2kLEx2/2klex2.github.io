@@ -1,29 +1,71 @@
 {
   "images": {
     "oil": {
+      "Wo die Häuser kippen": {
+        "WodieHäuserkippen.preview.webp": "file",
+        "WodieHäuserkippen.slide1.webp": "file",
+        "WodieHäuserkippen.slide2.webp": "file",
+        "WodieHäuserkippen.slide3.webp": "file",
+        "WodieHäuserkippen.slide4.webp": "file"
+      },
+      "Dune": {
+        "Dune.preview.webp": "file",
+        "Dune.slide1.webp": "file",
+        "Dune.slide2.webp": "file",
+        "Dune.slide3.webp": "file",
+        "Dune.slide4.webp": "file"
+      },
+      "Reflexion I": {
+        "ReflexionI.preview.webp": "file",
+        "ReflexionI.slide1.webp": "file",
+        "ReflexionI.slide2.webp": "file",
+        "ReflexionI.slide3.webp": "file",
+        "ReflexionI.slide4.webp": "file"
+      },
+      "Murano": {
+        "Murano.preview.webp": "file",
+        "Murano.slide1.webp": "file",
+        "Murano.slide2.webp": "file",
+        "Murano.slide3.webp": "file",
+        "Murano.slide4.webp": "file"
+      },
+      "Reflexion II": {
+        "ReflexionII.preview.webp": "file",
+        "ReflexionII.slide1.webp": "file",
+        "ReflexionII.slide2.webp": "file",
+        "ReflexionII.slide3.webp": "file",
+        "ReflexionII.slide4.webp": "file"
+      },
+      "In the privacy of your home": {
+        "Intheprivacyofyourhome.preview.webp": "file",
+        "Intheprivacyofyourhome.slide1.webp": "file",
+        "Intheprivacyofyourhome.slide2.webp": "file",
+        "Intheprivacyofyourhome.slide3.webp": "file",
+        "Intheprivacyofyourhome.slide4.webp": "file"
+      },
       "Hamburg": {
-        "Hamburg.preview.jpg": "file",
-        "Hamburg.slide1.jpg": "file",
-        "Hamburg.slide2.jpg": "file",
-        "Hamburg.slide3.jpg": "file"
+        "Hamburg.preview.webp": "file",
+        "Hamburg.slide1.webp": "file",
+        "Hamburg.slide2.webp": "file",
+        "Hamburg.slide3.webp": "file"
       },
       "Landungsbrücken": {
-        "Landungsbrücken.preview.jpg": "file",
-        "Landungsbrücken.slide1.jpg": "file",
-        "Landungsbrücken.slide2.jpg": "file",
-        "Landungsbrücken.slide3.jpg": "file"
+        "Landungsbrücken.preview.webp": "file",
+        "Landungsbrücken.slide1.webp": "file",
+        "Landungsbrücken.slide2.webp": "file",
+        "Landungsbrücken.slide3.webp": "file"
       },
       "Ziemlich beste Freunde": {
-        "ZiemlichbesteFreunde.preview.jpeg": "file",
-        "ZiemlichbesteFreunde.slide1.jpeg": "file",
-        "ZiemlichbesteFreunde.slide2.jpeg": "file",
-        "ZiemlichbesteFreunde.slide3.jpg": "file"
+        "ZiemlichbesteFreunde.preview.webp": "file",
+        "ZiemlichbesteFreunde.slide1.webp": "file",
+        "ZiemlichbesteFreunde.slide2.webp": "file",
+        "ZiemlichbesteFreunde.slide3.webp": "file"
       },
       "Detail": {
-        "Detail.preview.jpg": "file",
-        "Detail.slide1.jpeg": "file",
-        "Detail.slide2.jpeg": "file",
-        "Detail.slide3.jpeg": "file"
+        "Detail.preview.webp": "file",
+        "Detail.slide1.webp": "file",
+        "Detail.slide2.webp": "file",
+        "Detail.slide3.webp": "file"
       },
       "Kastanien No. I": {
         "KastanienNoI.preview.webp": "file",

@@ -13,11 +13,12 @@ const path = require('path');
 // List of artwork titles that are sold
 const soldItems = [
     "Fuchs",
-    "Studie l",
+    "Studie I",
     "Mount Ama Dablam",
     "Chiemsee",
     "Tropfen",
-    "11"
+    "11",
+    "Visier"
     // Add more titles of sold artworks here
 ];
 
